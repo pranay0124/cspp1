@@ -1,0 +1,10 @@
+Step 1: Start
+Step 2: Declare N
+Step 3: If N>=95 then print N= EX else go to step 4
+Step 4: If N>=90 && N<95 then print N=A+ go to step 10
+Step 5: If N>=85 && N<90 then print N=A go to step 10
+Step 6: If N>=80 && N<85 then print N=B+ go to step 10
+Step 7: If N>=75 && N<80 then print N=B go to step 10
+Step 8: If N>=70 && N<75 then print N=C go to step 10
+Step 9: If N<70 then print N=F else go to step 10
+Step 10: End
