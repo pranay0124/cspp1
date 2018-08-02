@@ -10,7 +10,7 @@ def main():
     for ch_r in s_t:
         if ch_r in ('a', 'e', 'i', 'o', 'u'):
             co_t += 1
-    print("Number of vowels:", str(co_t))
+    print(co_t)
 
 if __name__ == "__main__":
     main()
