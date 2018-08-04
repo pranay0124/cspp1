@@ -17,10 +17,10 @@ def main():
         int_2 = int_2 // 10
         len_1 -= 1
     if int_1 > 0:
-    	print(mu_l)
+        print(mu_l)
     else:
-    	mu_l = mu_l * -1
-    	print(mu_l)
+        mu_l = mu_l * -1
+        print(mu_l)
 
 if __name__ == "__main__":
     main()
