@@ -12,7 +12,7 @@ def main():
     while abs(gu_ess ** 2 - int(s_1)) >= ep_i and gu_ess <= int(s_1):
         gu_ess += inc_r
     if abs(gu_ess ** 2 - int(s_1)) >= ep_i:
-        print('Failed on cube root of' + str(s_1))
+        print('Failed on square root of' + str(s_1))
     else:
         print(gu_ess)
 
