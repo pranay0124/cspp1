@@ -12,7 +12,7 @@ def main():
         if i in('!', '@', '#', '$', '%', '^', '&', '*'):
             str_2 = str_2 + " "
         else:
-            str_2 = str_2 + i 
+            str_2 = str_2 + i
     print(str_2)
 
 if __name__ == "__main__":
