@@ -31,7 +31,7 @@ def paying_debt_off_in_a_year(balance_up, annual_interest_rate):
     return "Lowest Payment: "+str(round(min_pay, 2))
 
 def main():
-	'''main function'''
+    '''main function'''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
