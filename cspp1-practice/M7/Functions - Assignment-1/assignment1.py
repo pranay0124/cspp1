@@ -14,7 +14,7 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate, monthly_payment_rat
         monthly_unpaid_bal = balance_copy - min_monthly_pay
         balance_copy = monthly_unpaid_bal + (monthly_intr_rate * monthly_unpaid_bal)
         i += 1
-    return "Remaining balance:" + str(round(balance_copy, 2))
+    return "Remaining balance: " + str(round(balance_copy, 2))
 
 def main():
     '''main function'''
