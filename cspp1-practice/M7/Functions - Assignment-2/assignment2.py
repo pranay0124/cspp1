@@ -16,8 +16,7 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
             new_balance -= monthly_payment
             new_balance += (monthly_interest_rate * new_balance)
             month += 1
-    ans = "Lowest Payment: " + str(monthly_payment)
-    print(ans)
+    return "Lowest Payment: " + str(monthly_payment)
 
 def main():
     '''main function'''
