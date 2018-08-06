@@ -1,4 +1,4 @@
-''' 
+'''
     name : Pranay kumar Y
     date : 06-08-2018'''
 def paying_debt(balance_up, annual_interest_rate, guess_num):
@@ -30,12 +30,12 @@ def paying_debt_off_in_a_year(balance_up, annual_interest_rate):
     min_pay = middle_val
     return "Lowest Payment: "+str(round(min_pay, 2))
 
-
 def main():
+	'''main function'''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
     print(paying_debt_off_in_a_year(data[0], data[1]))
-    
+
 if __name__ == "__main__":
     main()
