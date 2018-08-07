@@ -4,10 +4,9 @@
 
 def factorial_num(n_1):
     '''recursive function for factorial'''
-    if n_1 == 1 or n_1 == 0:
-        return n_1
-    else:
-        return n_1 * factorial_num(n_1 - 1)
+    if n_1 in (1, 0):
+        return 1
+    return n_1 * factorial_num(n_1 - 1)
 
 def main():
     '''main function'''
