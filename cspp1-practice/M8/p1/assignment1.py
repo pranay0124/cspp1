@@ -6,7 +6,7 @@ def factorial_num(n_1):
     if n_1 == 1:
         return n_1
     else:
-        return n_1 * factorial(n_1 - 1)    
+        return n_1 * factorial_num(n_1 - 1)    
 
 def main():
     a = input()
