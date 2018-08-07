@@ -3,7 +3,7 @@
 
 def sum_of_digits(n_1):
     '''function for sum of digits'''
-    if n_1 == 1:
+    if n_1 == 0:
         return 0
     return (n_1 % 10) + sum_of_digits(n_1//10)
 
