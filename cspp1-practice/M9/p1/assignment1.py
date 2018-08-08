@@ -13,7 +13,7 @@ def is_word_guessed(secret_word, letters_guessed):
 	secretword_list = list(secret_word)
 	temp = letters_guessed[:]
 	if secretword_list == []:
-		return False
+		return True
 	i = 0
 	while i < len(letters_guessed):
 		if i in temp[0:i]:
