@@ -26,7 +26,7 @@ def is_word_guessed(secret_word, letters_guessed):
 		i = i+1
 	if count < len(secretword_list):
 		return False
-	return True
+	return False
 
 def main():
 	'''
