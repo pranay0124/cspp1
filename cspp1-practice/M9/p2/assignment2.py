@@ -13,14 +13,14 @@ def get_guessed_word(secret_word, letters_guessed):
         temp_stng = temp_stng.replace(each_char, "")
 
     for each_char in temp_stng:
-        if each_char != "":
-            secret_word = secret_word.replace(each_char, "")
+        if each_char != "_":
+            secret_word = secret_word.replace(each_char, "_")
     return secret_word
 
 
 def main():
     '''
-    Main function '''
+    Main function  '''
     user_input = input()
     if user_input:
         data = user_input.split()
@@ -29,7 +29,7 @@ def main():
         data = []
         secret_word = ""
     list1 = []
-    for j in range(1,len(data)):
+    for j in range(1, len(data)):
         list1.append(data[j][0])
     print(get_guessed_word(secret_word, list1))
 
