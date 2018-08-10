@@ -30,7 +30,7 @@ def main():
     word = input()
     n_value = int(input())
     adict = {}
-    for i in range(n):
+    for i in range(n_value):
         data = input()
         l_in = data.split()
         adict[l_in[0]] = int(l_in[1])
