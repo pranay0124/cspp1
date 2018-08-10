@@ -17,9 +17,10 @@ def is_valid_word(word, hand, word_list):
             count_value += 1
 
     if length_word == count_value:
-        return bool()
-    else:
+        if word in word_list:
+            return True
         return False
+    return False
 
 def main():
     ''' main function'''
