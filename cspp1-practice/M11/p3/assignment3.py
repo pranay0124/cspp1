@@ -18,7 +18,9 @@ def is_valid_word(word, hand, word_list):
 
     if length_word == count_value:
         if word in word_list:
-            return bool()
+            return True
+        else:
+            return False
     else:
         return False
 
@@ -27,7 +29,7 @@ def main():
     word = input()
     n_value = int(input())
     adict = {}
-    for _ in range(n_value):
+    for i in range(n_value):
         data = input()
         l_in = data.split()
         adict[l_in[0]] = int(l_in[1])
