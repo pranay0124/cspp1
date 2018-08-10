@@ -20,5 +20,5 @@ def main():
     print(integer_division(int(data[0]), int(data[1])))
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
