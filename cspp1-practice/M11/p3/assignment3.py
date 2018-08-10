@@ -6,7 +6,6 @@ def is_valid_word(word, hand, word_list):
     composed of letters in the hand. Otherwise, returns False.
 
     Does not mutate hand or wordList.
-   
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
@@ -19,9 +18,7 @@ def is_valid_word(word, hand, word_list):
 
     if length_word == count_value:
         if word in word_list:
-            return True
-        else:
-            return False
+            return bool(test)
     else:
         return False
 
@@ -30,7 +27,7 @@ def main():
     word = input()
     n_value = int(input())
     adict = {}
-    for i in range(n_value):
+    for _ in range(n_value):
         data = input()
         l_in = data.split()
         adict[l_in[0]] = int(l_in[1])
