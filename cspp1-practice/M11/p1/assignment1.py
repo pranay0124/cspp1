@@ -3,7 +3,7 @@ Exercise: Assignment-1
 The first step is to implement some code that allows us to calculate the score for a single word. The function get_word_score should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
 '''
 
-def get_word_score(word, n):
+def get_word_score(word, num):
     """
     Returns the score for a word. Assumes the word is a valid word.
 
@@ -28,10 +28,10 @@ def get_word_score(word, n):
     length_word = len(word)
     for i in word:
         sum += scrabble_letter_values[i]
-    x = sum*length_word
-    if n == length_word:
-        x += 50
-    return x
+    x_1 = sum*length_word
+    if num == length_word:
+        x_1 += 50
+    return x_1
     
 
 
