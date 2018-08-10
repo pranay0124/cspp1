@@ -17,14 +17,14 @@ def isValidWord(word, hand, wordList):
         if i in hand:
             count_value += 1
 
-    if l_value == count_value:
+    if length_word == count_value:
         if word in wordList:
             return True
         else:
             return False
     else:
         return False
-    
+
 def main():
     ''' main function'''
     word = input()
@@ -35,7 +35,7 @@ def main():
         l = data.split()
         adict[l[0]] = int(l[1])
     l2 = input().split()
-    print(isValidWord(word,adict,l2))
-        
-if __name__== "__main__":
+    print(isValidWord(word, adict, l2))
+
+if __name__ == "__main__":
     main()
