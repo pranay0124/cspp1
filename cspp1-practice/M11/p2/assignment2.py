@@ -1,7 +1,7 @@
 ''' Author : Pranay kumar Y
     Date : 10-08-2018'''
 
-def updateHand(hand, word):
+def update_hand(hand, word):
     """
     word: string
     hand: dictionary (string -> int)    
@@ -16,14 +16,14 @@ def updateHand(hand, word):
     return hand
 
 def main():
-    n=input()
-    adict={}
-    for i in range(int(n)):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
-    data1=input()
-    print(updateHand(adict,data1))
+    n_value = input()
+    adict = {}
+    for i in range(int(n_value)):
+        data = input()
+        l_in = data.split()
+        adict[l[0]] = int(l_in[1])
+    data1 = input()
+    print(update_hand(adict, data1))
         
 if __name__ == "__main__":
     main()
