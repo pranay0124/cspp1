@@ -1,6 +1,6 @@
 ''' Author : Pranay Kumar Y
     Date : 10-08-2018'''
-def isValidWord(word, hand, wordList):
+def is_valid_word(word, hand, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -18,7 +18,7 @@ def isValidWord(word, hand, wordList):
             count_value += 1
 
     if length_word == count_value:
-        if word in wordList:
+        if word in word_list:
             return True
         else:
             return False
@@ -28,14 +28,14 @@ def isValidWord(word, hand, wordList):
 def main():
     ''' main function'''
     word = input()
-    n = int(input())
+    n_value = int(input())
     adict = {}
     for i in range(n):
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
-    l2 = input().split()
-    print(isValidWord(word, adict, l2))
+        l_in = data.split()
+        adict[l_in[0]] = int(l_in[1])
+    word_s = input().split()
+    print(is_valid_word(word, adict, word_s))
 
 if __name__ == "__main__":
     main()
