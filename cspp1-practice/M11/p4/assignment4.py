@@ -3,18 +3,18 @@
 '''
 
 def calculate_hand_len(hand):
-    """ 
+    """
     Returns the length (number of letters) in the current hand.
-    
     hand: dictionary (string int)
     returns: integer
     """
-    sum = 0
+    sum_value = 0
     for values in hand.values():
-        sum += values
-    return sum
+        sum_value += values
+    return sum_value
 
 def main():
+    '''main function'''
     n_value = input()
     adict = {}
     for _ in range(int(n_value)):
