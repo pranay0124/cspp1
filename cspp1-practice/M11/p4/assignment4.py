@@ -17,7 +17,7 @@ def calculate_hand_len(hand):
 def main():
     n_value = input()
     adict = {}
-    for _ in range(int(n)):
+    for _ in range(int(n_value)):
         data = input()
         l_in = data.split()
         adict[l_in[0]] = int(l_in[1])
