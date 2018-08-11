@@ -35,6 +35,7 @@ def create_social_network(data):
     # remove the pass below and start writing your code
     data = data.splitlines()
     dict_1 = {}
+
     for i in data:
 
         list_1 = i.split(" follows ")
@@ -45,11 +46,8 @@ def create_social_network(data):
                 dict_1[list_1[0]].append(int(j))
 
         else:
-            if list_1[1] != ',':
-                return dict_1
             list_1[1] = list_1[1].split(',')
             dict_1[list_1[0]] = list_1[1]
-
     return dict_1
 
 def main():
