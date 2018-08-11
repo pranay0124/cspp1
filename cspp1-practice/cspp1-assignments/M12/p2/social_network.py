@@ -1,7 +1,6 @@
 '''
-    This is a continuation of the social network problem
-    There are 3 functions below that have to be completed
-    Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
+    Author : Pranay Kumar Y
+    Date : 11-08-2018
 '''
 
 def follow(network, arg1, arg2):
@@ -41,8 +40,13 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
 
-    for i in network(arg1[0]):
-        i.remove(str(arg1))
+    #for i in network[0]:
+     #   if i in network(arg1[0]):
+      #      i.remove(str(arg1))
+    for i in network:
+        for k in [network[0]][k] == str(arg1):
+            print(network)
+            #network.remove(str(arg1))
     if arg1 in network:
         del network[arg1]
     return network
