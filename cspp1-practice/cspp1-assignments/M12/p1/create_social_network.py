@@ -1,5 +1,6 @@
 '''
-    Assignment-1 Create Social Network
+    Author : Pranay Kumar Y
+    Date : 11-08-2018
 '''
 
 def create_social_network(data):
@@ -39,6 +40,8 @@ def create_social_network(data):
     for i in data:
 
         list_1 = i.split(" follows ")
+        if list_1[0].endswith("!") == True:
+            return dict_1
 
         if list_1[0] in dict_1:
             list_1[1] = list_1[1].split(',')
