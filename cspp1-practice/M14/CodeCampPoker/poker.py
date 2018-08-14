@@ -14,14 +14,14 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    # sorted_hand = str(hand.sort()) 
+    # sorted_hand = str(hand.sort())
     # sorted_hand = dict(sorted_hand())
     face_value = []
     sequenced_face_value = []
     sequence = '23456789TJQKA'
     for i in hand:
         face_value.append(i[0])
-    adict = {'2':2 , '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
+    adict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     for i in adict:
         for j in face_value:
             if i == j:
@@ -88,17 +88,13 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    
-    
-
     if is_straight(hand) and is_flush(hand):
         return 3
     elif is_flush(hand):
         return 2
     elif is_straight(hand):
         return 1
-    else:
-        return 0
+    return 0
 
 
 def poker(hands):
