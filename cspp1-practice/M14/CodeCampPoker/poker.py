@@ -41,23 +41,28 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    count_s = 0
-    count_h = 0
-    count_d = 0
-    count_c = 0
-    for i in hand:
-        if hand[1] == 'S':
-            count_s += 1
-        if hand[1] == 'H':
-            count_h += 1
-        if hand[1] == 'D':
-            count_d += 1
-        if hand[1] == 'C':
-            count_c += 1
+    # count_s = 0
+    # count_h = 0
+    # count_d = 0
+    # count_c = 0
+    # for i in hand:
+    #     if hand[1] == 'S':
+    #         count_s += 1
+    #     if hand[1] == 'H':
+    #         count_h += 1
+    #     if hand[1] == 'D':
+    #         count_d += 1
+    #     if hand[1] == 'C':
+    #         count_c += 1
 
-    if count_c == 5 or count_d == 5 or count_h == 5 or count_s == 5:
-        return True
-    return False
+    # if count_c == 5 or count_d == 5 or count_h == 5 or count_s == 5:
+    #     return True
+    # return False
+    ch_r = hand[0][1]
+    for i in hand:
+        if ch_r != i[1]:
+            return False
+    return True
 
 def hand_rank(hand):
     '''
