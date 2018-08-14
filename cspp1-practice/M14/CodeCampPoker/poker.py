@@ -23,12 +23,12 @@ def is_straight(hand):
         face_value.append(i[0])
     adict = {'2':2 , '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     for i in adict:
-    	for j in face_value:
-    		if i == j:
+        for j in face_value:
+            if i == j:
                 sequenced_face_value.append(i)
     for k in range(len(sequence)-4):
-    	if ''.join(sequenced_face_value) == sequence[k:k+5]:
-    		return 1
+        if ''.join(sequenced_face_value) == sequence[k:k+5]:
+            return 1
     return 0
 
 def is_flush(hand):
@@ -45,17 +45,17 @@ def is_flush(hand):
     count_d = 0
     count_c = 0
     for i in hand:
-    	if hand[1] == 'S':
-    		count_s += 1
-    	if hand[1] == 'H':
-    		count_h += 1
+        if hand[1] == 'S':
+            count_s += 1
+        if hand[1] == 'H':
+            count_h += 1
         if hand[1] == 'D':
-    		count_d += 1
-    	if hand[1] == 'C':
-    		count_c += 1
+            count_d += 1
+        if hand[1] == 'C':
+            count_c += 1
 
     if count_c == 5 or count_d == 5 or count_h == 5 or count_s == 5:
-    	return True
+        return True
     return False
 
 def hand_rank(hand):
@@ -86,13 +86,13 @@ def hand_rank(hand):
     
 
     if is_straight(hand) and is_flush(hand):
-    	return 3
+        return 3
     elif is_flush(hand):
-    	return 2
+        return 2
     elif is_straight(hand):
-    	return 1
+        return 1
     else:
-    	return 0
+        return 0
 
 
 def poker(hands):
