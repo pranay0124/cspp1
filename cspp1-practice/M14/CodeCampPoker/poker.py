@@ -18,21 +18,17 @@ def is_straight(hand):
     # sorted_hand = dict(sorted_hand())
     face_value = []
     sequenced_face_value = []
-    sequence = '23456789TJQK'
+    sequence = '23456789TJQKA'
     for i in hand:
         face_value.append(i[0])
-    print (face_value)
     adict = {'2':2 , '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     for i in adict:
         for j in face_value:
             if i == j:
                 sequenced_face_value.append(i)
-    print(sequenced_face_value)
     for k in range(len(sequence)-4):
         if ''.join(sequenced_face_value) == sequence[k:k+5]:
-            print(True, 'test')
             return 1
-    print(False,'test')
     return 0
 
 
