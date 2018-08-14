@@ -8,8 +8,10 @@ def update_hand(hand, word):
     returns: dictionary (string -> int)
     """
     for i in word:
-        if i in hand:
+        if i in hand and hand[i] != 0:
             hand[i] -= 1
+        if hand[i] == 0:
+            del hand[i]
     #for j in adict:
      #   if adict[j] > 0:
       #      print (adict[j])
