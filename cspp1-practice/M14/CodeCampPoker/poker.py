@@ -38,21 +38,21 @@ def hand_rank(hand):
     ''' Function to call all the functions '''
     rank = hand_values(hand)
     if is_straight(rank) and is_flush(hand):            #Straightflush
-        return 8,rank
-    if kind(rank,4):                                   #Four of a kind
-        return 7,kind(rank,4),rank
+        return 8, rank
+    if kind(rank, 4):                                   #Four of a kind
+        return 7, kind(rank, 4), rank
     if kind(rank, 3) and kind(rank, 2):                 #Full house
-        return 6,kind(rank,3),kind(rank,2),rank
+        return 6, kind(rank, 3), kind(rank, 2), rank
     if is_flush(hand):                                  #Flush
         return 5, rank
     if is_straight(rank):                               #Straight
-        return 4,rank
-    if kind(rank,3):                                   # Three of a kind
+        return 4, rank
+    if kind(rank, 3):                                   #Three of a kind
         return 3, kind(rank, 3), rank
     if is_two_pair(rank):                               #Two pair
         return 2,is_two_pair(rank)
-    if kind(rank,2):                                   #One pair
-        return 1,kind(rank, 2), rank
+    if kind(rank, 2):                                   #One pair
+        return 1, kind(rank, 2), rank
     return 0, rank
 
 def poker(hands):
