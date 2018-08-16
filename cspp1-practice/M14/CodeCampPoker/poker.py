@@ -37,7 +37,7 @@ def is_one_pair(hand):
     make_dict(hand,2)
 
 def is_full_house(hand):
-    
+    pass
 
 def is_straight(hand):
     '''
