@@ -3,6 +3,41 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+import collections
+def make_dict(hand):
+    face_value = [c for c,x in hand]
+    adict = collections.Counter(face_value)
+    return adict
+    # if n in list(face_value_count.values()):
+    #     return True
+    # else:
+    #     return False
+    '''dic = {}
+    for i in hand:
+        if i[0] in dic:
+            dic[i[0]] += 1
+        else:
+            dic[i[0]] = 1
+    if 4 in list(dic.values()):
+        print("True")
+    else:
+        print("False")
+    '''
+
+def is_four_of_a_kind(hand):
+    if 4 in list(make_dict.values()):
+        return True
+    else:
+        return False
+
+def is_three_of_a_kind(hand):
+    make_dict(hand,3)
+
+def is_one_pair(hand):
+    make_dict(hand,2)
+
+def is_full_house(hand):
+    
 
 def is_straight(hand):
     '''
@@ -42,26 +77,9 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    # count_s = 0
-    # count_h = 0
-    # count_d = 0
-    # count_c = 0
-    # for i in hand:
-    #     if hand[1] == 'S':
-    #         count_s += 1
-    #     if hand[1] == 'H':
-    #         count_h += 1
-    #     if hand[1] == 'D':
-    #         count_d += 1
-    #     if hand[1] == 'C':
-    #         count_c += 1
-
-    # if count_c == 5 or count_d == 5 or count_h == 5 or count_s == 5:
-    #     return True
-    # return False
-    ch_r = hand[0][1]
+    suit_value = hand[0][1]
     for i in hand:
-        if ch_r != i[1]:
+        if suit_value != i[1]:
             return False
     return True
 
