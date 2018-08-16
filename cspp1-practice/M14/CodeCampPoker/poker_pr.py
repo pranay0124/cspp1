@@ -53,7 +53,8 @@ def hand_rank(hand):
         return 2,is_two_pair(rank)
     if kind(rank,2):                                   #One pair
         return 1,kind(rank, 2), rank
-    return tuple(0)
+    return 0, rank
+
 def poker(hands):
     '''
     main poker function
