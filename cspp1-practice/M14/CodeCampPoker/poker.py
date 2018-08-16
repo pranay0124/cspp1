@@ -50,7 +50,7 @@ def hand_rank(hand):
     if kind(rank, 3):                                   #Three of a kind
         return 3, kind(rank, 3), rank
     if is_two_pair(rank):                               #Two pair
-        return 2,is_two_pair(rank)
+        return 2, is_two_pair(rank)
     if kind(rank, 2):                                   #One pair
         return 1, kind(rank, 2), rank
     return 0, rank
