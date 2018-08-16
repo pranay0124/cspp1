@@ -5,24 +5,24 @@
 import collections
 def make_dict(hand):
     '''function to make dictionary'''
-    face_value = [c for c,x in hand]
+    face_value = [c for c, x in hand]
     adict = collections.Counter(face_value)
     return adict
     # if n in list(face_value_count.values()):
     #     return True
     # else:
     #     return False
-    '''dic = {}
-    for i in hand:
-        if i[0] in dic:
-            dic[i[0]] += 1
-        else:
-            dic[i[0]] = 1
-    if 4 in list(dic.values()):
-        print("True")
-    else:
-        print("False")
-    '''
+    # '''dic = {}
+    # for i in hand:
+    #     if i[0] in dic:
+    #         dic[i[0]] += 1
+    #     else:
+    #         dic[i[0]] = 1
+    # if 4 in list(dic.values()):
+    #     print("True")
+    # else:
+    #     print("False")
+    # '''
 
 def is_four_of_a_kind(hand):
     '''function'''
