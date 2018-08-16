@@ -1,7 +1,6 @@
 '''
-    Write a program to evaluate poker hands and determine the winner
-    Read about poker hands here.
-    https://en.wikipedia.org/wiki/List_of_poker_hands
+    Author: Pranay Kumar Y
+    date : 16-08-2018
 '''
 import collections
 def make_dict(hand):
@@ -25,19 +24,43 @@ def make_dict(hand):
     '''
 
 def is_four_of_a_kind(hand):
-    if 4 in list(make_dict.values()):
+    my_dict = make_dict(hand)
+    if 4 in list(my_dict.values()):
         return True
     else:
         return False
 
 def is_three_of_a_kind(hand):
-    make_dict(hand,3)
+    my_dict = make_dict(hand)
+    if 3 in list(my_dict.values()):
+        return True
+    else:
+        return False
 
 def is_one_pair(hand):
-    make_dict(hand,2)
+    my_dict = make_dict(hand)
+    if 2 in list(my_dict.values()):
+        return True
+    else:
+        return False
 
 def is_full_house(hand):
-    pass
+    my_dict = make_dict(hand)
+    if 3 in list(my_dict.values()):
+        if 2 in list(my_dict.values()):
+            return True
+    else:
+        return False
+
+def is_two_pair(hand):
+    my_dict = make_dict(hand)
+    count = 0
+    if list(my_dict.values()) == 2:
+        count += 1
+    if count == 2:
+        return True
+    else:
+        return False
 
 def is_straight(hand):
     '''
@@ -108,10 +131,20 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        return 3
+        return 8
+    if is_four_of_a_kind(hand):
+        return 7
+    if is_full_house(hand):
+        return 6
     if is_flush(hand):
-        return 2
+        return 5
     if is_straight(hand):
+        return 4
+    if is_three_of_a_kind(hand):
+        return 3
+    if is_two_pair(hand):
+        return 2
+    if is_one_pair(hand):
         return 1
     return 0
 
