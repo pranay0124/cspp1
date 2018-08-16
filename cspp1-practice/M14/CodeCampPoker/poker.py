@@ -4,6 +4,7 @@
 '''
 import collections
 def make_dict(hand):
+    '''function to make dictionary'''
     face_value = [c for c,x in hand]
     adict = collections.Counter(face_value)
     return adict
@@ -24,43 +25,43 @@ def make_dict(hand):
     '''
 
 def is_four_of_a_kind(hand):
+    '''function'''
     my_dict = make_dict(hand)
     if 4 in list(my_dict.values()):
         return True
-    else:
-        return False
+    return False
 
 def is_three_of_a_kind(hand):
+    '''function'''
     my_dict = make_dict(hand)
     if 3 in list(my_dict.values()):
         return True
-    else:
-        return False
+    return False
 
 def is_one_pair(hand):
+    '''function'''
     my_dict = make_dict(hand)
     if 2 in list(my_dict.values()):
         return True
-    else:
-        return False
+    return False
 
 def is_full_house(hand):
+    '''function'''
     my_dict = make_dict(hand)
     if 3 in list(my_dict.values()):
         if 2 in list(my_dict.values()):
             return True
-    else:
-        return False
+    return False
 
 def is_two_pair(hand):
+    '''function'''
     my_dict = make_dict(hand)
     count = 0
     if list(my_dict.values()) == 2:
         count += 1
     if count == 2:
         return True
-    else:
-        return False
+    return False
 
 def is_straight(hand):
     '''
