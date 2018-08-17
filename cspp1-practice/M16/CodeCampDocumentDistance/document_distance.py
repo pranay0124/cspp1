@@ -10,10 +10,6 @@ def remove_stopword(adict):
         adict.pop(i, None)
     return adict
 '''
-def Merge(dict1, dict2):
-    res = {**dict1, **dict2}
-    return res
-    
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
@@ -30,9 +26,6 @@ def similarity(dict1, dict2):
     dict1 = dict1.split()
     dict2 = dict2.split()
     
-    # dict1 = dict(collections.Counter(dict1))
-    # dict1 = dict(collections.Counter(dict1))
-
     stopword = load_stopwords("stopwords.txt")
     key_list = stopword.keys()
     
@@ -46,7 +39,9 @@ def similarity(dict1, dict2):
             if i == j:
                 dict2.remove(j)
 
-    dict3 = Merge(dict1,dict2)
+    dict1 = dict(collections.Counter(dict1))
+    dict2 = dict(collections.Counter(dict2))
+
 
     print(dict3)
     
