@@ -51,8 +51,6 @@ def similarity(dict1, dict2):
             if i == j:
                 dict2.remove(j)
     
-    print(dict1)
-    print(dict2)
     '''writing combined dictionary'''
     dict1 = dict(collections.Counter(dict1))
     dict2 = dict(collections.Counter(dict2))
