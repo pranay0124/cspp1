@@ -18,6 +18,7 @@ def similarity(dict1, dict2):
 
     dict1 = dict1.split()
     dict2 = dict2.split()
+    print(dict1)
     
     # dict1 = dict(collections.Counter(dict1))
     # dict1 = dict(collections.Counter(dict1))
@@ -30,7 +31,7 @@ def similarity(dict1, dict2):
         if i in dict2:
             dict2.remove(i)
     print(dict1)
-    print(dict2)
+    
     
     
 
