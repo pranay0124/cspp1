@@ -26,10 +26,10 @@ def similarity(dict1, dict2):
     stopword = list(load_stopwords("stopwords.txt"))
     for i in dict1:
         if i in stopword:
-            dict1.remove(i)
+            dict1.replace(i,"@")
     for i in dict2:
         if i in stopword:
-            dict2.remove(i)
+            dict2.replace(i,"@")
     print(dict1)
     
     
