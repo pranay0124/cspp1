@@ -44,13 +44,13 @@ def similarity(dict1, dict2):
     stopword = load_stopwords("stopwords.txt")
     key_list = list(stopword.keys())
 
-    word_list = key_list[:]
+    word_list = dict1[:]
 
     for i in word_list:
         if i in key_list:
             dict1.remove(i)
 
-    word_list = key_list[:]
+    word_list = dict2[:]
 
     for i in word_list:
         if i in key_list:
