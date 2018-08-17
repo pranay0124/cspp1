@@ -75,19 +75,19 @@ def similarity(dict1, dict2):
     dict2 = dict(collections.Counter(dict2))
 
     combined_dict = {}
-    for k in dict1:
-        if k in dict2:
-            combined_dict[k] = [dict1[k], dict2[k]]
+    for i in dict1:
+        if i in dict2:
+            combined_dict[i] = [dict1[i], dict2[i]]
         else:
-            combined_dict[k] = [dict1[k], 0]
-    for l in dict2:
-        if l not in combined_dict:
-            combined_dict[l] = [0, dict2[l]]
+            combined_dict[i] = [dict1[i], 0]
+    for j in dict2:
+        if j not in combined_dict:
+            combined_dict[j] = [0, dict2[j]]
 
     temp_dict = copy.deepcopy(combined_dict)
-    for h in temp_dict:
-        if len(h) == 0:
-            del combined_dict[h]
+    for k in temp_dict:
+        if len(k) == 0:
+            del combined_dict[k]
     return calculation(combined_dict)
 
 def load_stopwords(filename):
