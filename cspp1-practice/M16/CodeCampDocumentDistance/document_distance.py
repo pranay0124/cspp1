@@ -19,10 +19,10 @@ def similarity(dict1, dict2):
     dict1 = dict1.split()
     dict2 = dict2.split()
     
-    dict1 = dict(collections.counter(dict1))
-    dict1 = dict(collections.counter(dict1))
-    
-    # stopword = load_stopwords("stopwords.txt")
+    dict1 = dict(collections.Counter(dict1))
+    dict1 = dict(collections.Counter(dict1))
+
+    stopword = load_stopwords("stopwords.txt")
     # for word in stopword:
     # 	if word in dict1:
     # 		dict1 = dict1.replace(word,"")
@@ -30,7 +30,7 @@ def similarity(dict1, dict2):
     # 	if word in dict2:
     # 		dict2 = dict2.replace(word,"")
     print(dict1)
-    
+    print(stopwords)
 
 
 def load_stopwords(filename):
