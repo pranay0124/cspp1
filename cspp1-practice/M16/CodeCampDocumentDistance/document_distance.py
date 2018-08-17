@@ -25,9 +25,10 @@ def similarity(dict1, dict2):
 
     stopword = load_stopwords("stopwords.txt")
     for i in stopword:
-    	dict1.pop(i,None)
-    print(dict1)
+    	dict1.pop(i, None)
+        dict2.pop(i, None)
     
+    print(dict1)
 
 def load_stopwords(filename):
     '''
