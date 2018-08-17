@@ -4,6 +4,7 @@
 '''
 import re
 import collections
+import math
 '''
 def remove_stopword(adict):
     stopword = load_stopwords("stopwords.txt")
