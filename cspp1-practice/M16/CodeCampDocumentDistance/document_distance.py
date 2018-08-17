@@ -3,6 +3,12 @@
 '''
 import re
 import collections
+def remove_stopword(adict):
+    stopword = load_stopwords("stopwords.txt")
+    for i in stopword:
+        adict.pop(i, None)
+    return adict
+
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
@@ -23,11 +29,13 @@ def similarity(dict1, dict2):
     dict1 = dict(collections.Counter(dict1))
     print(dict1)
 
-    stopword = load_stopwords("stopwords.txt")
-    for i in stopword:
-        dict1.pop(i, None)
-    for j in stopword:
-        dict2.pop(j, None)
+    # stopword = load_stopwords("stopwords.txt")
+    # for i in stopword:
+    #     dict1.pop(i, None)
+    # for j in stopword:
+    #     dict2.pop(j, None)
+    dict1 = remove_stopword(dict1)
+    dict2 = remove_stopword(dict2)
     print(dict1)
     print(dict2)
 
