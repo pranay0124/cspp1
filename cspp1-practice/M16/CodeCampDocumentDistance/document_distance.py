@@ -32,8 +32,7 @@ def similarity(dict1, dict2):
     stopword = load_stopwords("stopwords.txt")
     remove_word = list(stopword)
     adict = set(dict1) - set(remove_word)
-    print(dict1)
-    print(dict2)
+    print(adict)
 
 def load_stopwords(filename):
     '''
