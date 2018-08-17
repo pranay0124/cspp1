@@ -26,7 +26,7 @@ def similarity(dict1, dict2):
     stopword = load_stopwords("stopwords.txt")
     for word in stopword:
         if word in dict1:
-            dict1 = dict1.pop()
+            dict1 = dict1.pop(word)
     # for i in stopword.keys():
     #     if i in dict1:
     #         dict1.remove(i)
