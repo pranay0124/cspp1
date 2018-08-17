@@ -33,8 +33,8 @@ def similarity(dict1, dict2):
     remove_word = list(stopword)
     adict1 = set(dict1) - set(remove_word)
     adict2 = set(dict2) - set(remove_word)
-    adict1 = dict(adict1)
-    print(adict1)
+    adict_1 = dict(adict1)
+    print(adict_1)
     print(adict2)
 
 
