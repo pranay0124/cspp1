@@ -36,6 +36,11 @@ def similarity(dict1, dict2):
         for j in dict1:
             if i == j:
                 dict1.remove(j)
+    
+    for i in key_list:
+        for j in dict2:
+            if i == j:
+                dict2.remove(j)
 
     print(dict1)
     
