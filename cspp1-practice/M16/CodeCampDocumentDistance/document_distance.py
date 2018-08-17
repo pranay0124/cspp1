@@ -42,7 +42,9 @@ def similarity(dict1, dict2):
             if i == j:
                 dict2.remove(j)
 
-    print(dict1)
+    dict3 = Merge(dict1,dict2)
+
+    print(dict3)
     
 
 
