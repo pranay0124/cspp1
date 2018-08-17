@@ -35,13 +35,13 @@ def similarity(dict1, dict2):
     dict2 = dict2.strip('!@#$%^&*()?><,./;:')
 
     #hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
-    '''replacing " ' " in between words (Eg:we're == were)'''
+    '''replacing ' in between words (Eg:we're == were)'''
     dict1 = dict1.replace("'", "")
     dict2 = dict2.replace("'", "")
- 
+
     dict1 = dict1.split()
     dict2 = dict2.split()
-    
+
     '''removing stopwords'''
     stopword = load_stopwords("stopwords.txt")
     key_list = list(stopword.keys())
@@ -84,8 +84,8 @@ def similarity(dict1, dict2):
         if l not in combined_dict:
             combined_dict[l] = [0, dict2[l]]
 
-    d1 = copy.deepcopy(combined_dict)
-    for h in d1:
+    temp_dict = copy.deepcopy(combined_dict)
+    for h in temp_dict:
         if len(h) == 0:
             del combined_dict[h]
     return calculation(combined_dict)
