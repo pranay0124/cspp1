@@ -8,13 +8,13 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     
-    dict1 = re.sub('[^ a-zA-Z]','',dict1.lower())
-    dict2 = re.sub('[^ a-zA-Z]','',dict2.lower()) 
+    dict1 = re.sub('[^ a-zA-Z]', '', dict1.lower())
+    dict2 = re.sub('[^ a-zA-Z]', '', dict2.lower()) 
     dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
     dict2 = dict2.strip('!@#$%^&*()?><,./;:')
     #hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
-    dict1 = dict1.replace("'","")
-    dict2 = dict2.replace("'","")
+    dict1 = dict1.replace("'", "")
+    dict2 = dict2.replace("'", "")
 
     dict1 = dict1.split()
     dict2 = dict2.split()
@@ -26,10 +26,10 @@ def similarity(dict1, dict2):
     stopword = load_stopwords("stopwords.txt")
     for i in stopword:
         dict1.pop(i, None)
-    # for i in stopword_2:
-    #     dict2.pop(i, None)
+    for j in stopword:
+        dict2.pop(j, None)
     print(dict1)
-    
+    print(dict2)
 
 def load_stopwords(filename):
     '''
