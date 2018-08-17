@@ -17,7 +17,7 @@ def similarity(dict1, dict2):
     stopword = load_stopwords("stopwords.txt")
     for word in stopword:
     	if word in dict1:
-    		dict1 = dict1.replace(word,"")
+    		dict1 = dict1.replace(word,"Y")
     for word in stopword:
     	if word in dict2:
     		dict2 = dict2.replace(word,"")
