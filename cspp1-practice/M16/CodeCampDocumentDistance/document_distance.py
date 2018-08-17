@@ -5,6 +5,7 @@
 import re
 import collections
 import math
+import copy
 '''
 def remove_stopword(adict):
     stopword = load_stopwords("stopwords.txt")
@@ -77,7 +78,11 @@ def similarity(dict1, dict2):
     for l in dict2:
         if l not in combined_dict:
             combined_dict[l] = [0, dict2[l]]
-    print(combined_dict)
+
+    d1 = copy.deepcopy(combined_dict)
+    for h in d1:
+        if len(h) == 0:
+            del.combined_dict(h)
     return calculation(combined_dict)
 
 def load_stopwords(filename):
