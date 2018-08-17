@@ -20,8 +20,8 @@ def similarity(dict1, dict2):
     dict2 = dict2.split()
     print(dict1)
     
-    dict1 = dict(collections.Counter(dict1))
-    dict1 = dict(collections.Counter(dict1))
+    # dict1 = dict(collections.Counter(dict1))
+    # dict1 = dict(collections.Counter(dict1))
 
     stopword = load_stopwords("stopwords.txt")
     remove_words = list(stopword.keys())
