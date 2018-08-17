@@ -1,7 +1,7 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
-
+import re
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
@@ -12,7 +12,7 @@ def similarity(dict1, dict2):
     dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
     dict2 = dict2.strip('!@#$%^&*()?><,./;:')
     hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
-    dict1 = dict1.translate(None, ''.join(hand))
+    re.sub(hand,"",dict1)
 
 def load_stopwords(filename):
     '''
