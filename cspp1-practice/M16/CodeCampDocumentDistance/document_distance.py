@@ -12,12 +12,13 @@ def similarity(dict1, dict2):
     dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
     dict2 = dict2.strip('!@#$%^&*()?><,./;:')
     #hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
+    dict1 = dict(dict1.split())
     dict1 = dict1.replace("'","")
     dict2 = dict2.replace("'","")
     stopword = load_stopwords("stopwords.txt")
     for word in stopword:
     	if word in dict1:
-    		dict1 = dict1.replace(word,"Y")
+    		dict1 = dict1.replace(word,"")
     for word in stopword:
     	if word in dict2:
     		dict2 = dict2.replace(word,"")
