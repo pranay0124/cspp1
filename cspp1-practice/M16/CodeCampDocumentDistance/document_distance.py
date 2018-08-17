@@ -19,7 +19,7 @@ def calculation(d1):
     den_2 = 0
     for i in d1:
         num += d1[i][0]* d1[i][1]
-        den_1 +=  d1[i][0] ** 2
+        den_1 += d1[i][0] ** 2
         den_2 += d1[i][1] ** 2
     print(num, den_1, den_2)
     distance = num/(math.sqrt(den_1) * math.sqrt(den_2)) 
@@ -66,9 +66,12 @@ def similarity(dict1, dict2):
             if i == j:
                 dict2.remove(j)
     
+    print(dict1)
+    print(dict2)
     '''writing combined dictionary'''
     dict1 = dict(collections.Counter(dict1))
     dict2 = dict(collections.Counter(dict2))
+
     combined_dict = {}
     for k in dict1:
         if k in dict2:
