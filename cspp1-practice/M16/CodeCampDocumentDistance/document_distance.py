@@ -24,8 +24,9 @@ def similarity(dict1, dict2):
     dict1 = dict(collections.Counter(dict1))
 
     stopword = load_stopwords("stopwords.txt")
-    for i in stopword:
-        dict1 = dict1.pop(i)
+    for word in stopword:
+        if word in dict1:
+            dict1 = dict1.pop()
     # for i in stopword.keys():
     #     if i in dict1:
     #         dict1.remove(i)
