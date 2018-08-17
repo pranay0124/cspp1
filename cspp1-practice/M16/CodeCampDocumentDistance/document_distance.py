@@ -11,8 +11,9 @@ def similarity(dict1, dict2):
     dict2 = dict2.lower() 
     dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
     dict2 = dict2.strip('!@#$%^&*()?><,./;:')
-    #hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
-    
+    hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
+    dict1 = dict1.translate(None, ''.join(hand))
+
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
