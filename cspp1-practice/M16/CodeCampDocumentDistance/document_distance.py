@@ -30,18 +30,15 @@ def similarity(dict1, dict2):
     # dict1 = dict(collections.Counter(dict1))
 
     stopword = load_stopwords("stopwords.txt")
-    remove_word = list(stopword)
-    adict1 = set(dict1) - set(remove_word)
-    adict2 = set(dict2) - set(remove_word)
-    dict_new = {}
-    for i in adict1:
-        if i in dict_new:
-            dict_new[i] += 1
-        else:
-            dict_new['i'] = "1"
+    key_list = stopword.keys()
     
-    print(dict_new)
-    print(adict2)
+    for i in key_list:
+        for j in dict1:
+            if i == j:
+                dict1.remove(j)
+
+    print(dict1)
+    
 
 
 
