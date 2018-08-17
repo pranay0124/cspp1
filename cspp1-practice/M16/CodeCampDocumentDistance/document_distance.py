@@ -43,7 +43,8 @@ def similarity(dict1, dict2):
     dict2 = dict(collections.Counter(dict2))
 
 
-    print(dict3)
+    print(dict1)
+    print(dict2)
     
 
 
