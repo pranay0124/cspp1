@@ -33,8 +33,15 @@ def similarity(dict1, dict2):
     remove_word = list(stopword)
     adict1 = set(dict1) - set(remove_word)
     adict2 = set(dict2) - set(remove_word)
-    adict_1 = dict(adict1)
-    print(adict_1)
+    dict_new = {}
+    for i in adict1:
+        if i in dict_new:
+            dict_new[i] += 1
+        else:
+            dict_new.append[i]
+
+    
+    print(dict_new)
     print(adict2)
 
 
