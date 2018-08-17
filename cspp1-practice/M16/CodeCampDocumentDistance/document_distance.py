@@ -23,13 +23,13 @@ def similarity(dict1, dict2):
     # dict1 = dict(collections.Counter(dict1))
     # dict1 = dict(collections.Counter(dict1))
 
-    stopword = list(load_stopwords("stopwords.txt"))
-    for i in dict1:
-        if i in stopword:
-            dict1.replace(i,"@")
+    stopword = load_stopwords("stopwords.txt")
+    for i in stopword.keys():
+        if i in dict1:
+            dict1.remove(i)
     for i in dict2:
         if i in stopword:
-            dict2.replace(i,"@")
+            dict2.remove(i)
     print(dict1)
     
     
