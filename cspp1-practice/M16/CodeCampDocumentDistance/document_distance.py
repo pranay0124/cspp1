@@ -77,7 +77,7 @@ def similarity(dict1, dict2):
     for l in dict2:
         if l not in combined_dict:
             combined_dict[l] = [0, dict2[l]]
-    print(len(combined_dict))
+    print(combined_dict)
     return calculation(combined_dict)
 
 def load_stopwords(filename):
