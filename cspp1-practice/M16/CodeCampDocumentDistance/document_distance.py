@@ -7,12 +7,12 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     
-    dict1 = dict1.lower()
-    dict2 = dict2.lower() 
+    dict1 = re.sub('[^ a-zA-Z]','',dict1.lower())
+    dict2 = re.sub('[^ a-zA-Z]','',dict2.lower()) 
     dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
     dict2 = dict2.strip('!@#$%^&*()?><,./;:')
-    hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
-    re.sub(hand,"",dict1)
+    #hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
+    
 
 def load_stopwords(filename):
     '''
