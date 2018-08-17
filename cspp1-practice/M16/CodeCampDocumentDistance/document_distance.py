@@ -11,12 +11,22 @@ def remove_stopword(adict):
         adict.pop(i, None)
     return adict
 '''
+def calculation(d1):
+    num = 0
+    den_1 = 0
+    den_2 = 0
+    for value_1, value_2 in d1.values():
+        num += value_1 * value_2
+        den_1 += value_1 ** 2
+        den_2 += value_2 ** 2
+    return num/(math.sqrt(den_1) * math.sqrt(den_2)) 
+
 def similarity(dict1, dict2):
     '''lower case, removing special characters and numbers'''
     dict1 = re.sub('[^ a-z]', '', dict1.lower())
     dict2 = re.sub('[^ a-z]', '', dict2.lower()) 
-    # dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
-    # dict2 = dict2.strip('!@#$%^&*()?><,./;:')
+    dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
+    dict2 = dict2.strip('!@#$%^&*()?><,./;:')
 
     #hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
     '''replacing " ' " in between words (Eg:we're == were)'''
@@ -55,7 +65,7 @@ def similarity(dict1, dict2):
         if l not in combined_dict:
             combined_dict[l] = [0, dict2[l]]
 
-    print(combined_dict)
+    return (calculation(combined_dict))
 
 def load_stopwords(filename):
     '''
