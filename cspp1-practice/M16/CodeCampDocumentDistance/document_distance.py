@@ -10,29 +10,24 @@ def similarity(dict1, dict2):
     
     dict1 = re.sub('[^ a-zA-Z]','',dict1.lower())
     dict2 = re.sub('[^ a-zA-Z]','',dict2.lower()) 
-    # dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
-    # dict2 = dict2.strip('!@#$%^&*()?><,./;:')
+    dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
+    dict2 = dict2.strip('!@#$%^&*()?><,./;:')
     #hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
     dict1 = dict1.replace("'","")
     dict2 = dict2.replace("'","")
 
     dict1 = dict1.split()
     dict2 = dict2.split()
-    print(dict1)
     
-    # dict1 = dict(collections.Counter(dict1))
-    # dict1 = dict(collections.Counter(dict1))
+    dict1 = dict(collections.Counter(dict1))
+    dict1 = dict(collections.Counter(dict1))
 
-    stopword = load_stopwords("stopwords.txt")
-    remove_words = list(stopword.keys())
-    for i in remove_words:
-        if i in dict1:
-            dict1.remove(i)
-    for i in remove_words:
-        if i in dict2:
-            dict2.remove(i)
-    print(dict1)
-    
+    stopword_1 = load_stopwords("stopwords.txt")
+    stopword_2 = load_stopwords("stopwords.txt")
+    for i in stopword_1:
+        dict1.pop(i, None)
+    for i in stopword_2:
+        dict2.pop(i, None)
     
     
 
