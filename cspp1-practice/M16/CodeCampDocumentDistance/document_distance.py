@@ -16,10 +16,10 @@ def calculation(d1):
     num = 0
     den_1 = 0
     den_2 = 0
-    for value_1, value_2 in d1.values():
-        num += value_1 * value_2
-        den_1 += value_1 ** 2
-        den_2 += value_2 ** 2
+    for i in d1:
+        num += d1[i][0]* d1[i][1]
+        den_1 +=  d1[i][0] ** 2
+        den_2 += d1[i][1] ** 2
     print(num, den_1, den_2)
     return num/(math.sqrt(den_1) * math.sqrt(den_2)) 
 
