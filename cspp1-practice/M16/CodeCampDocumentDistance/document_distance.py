@@ -28,8 +28,9 @@ def calculation(d1):
 def similarity(dict1, dict2):
     '''lower case, removing special characters and numbers'''
     dict1 = re.sub('[^ a-z]', '', dict1.lower())
-    dict2 = re.sub('[^ a-z]', '', dict2.lower()) 
-    dict1 = dict1.strip('!@#$%^&*()?><,./;:')    
+    dict2 = re.sub('[^ a-z]', '', dict2.lower())
+
+    dict1 = dict1.strip('!@#$%^&*()?><,./;:')
     dict2 = dict2.strip('!@#$%^&*()?><,./;:')
 
     #hand = ['0', '1', '2','3','4','5','6','7','8','9','!','@','#','$','%','^','&','*','(',')','?']
@@ -54,7 +55,7 @@ def similarity(dict1, dict2):
 
     for i in word_list:
         if i in key_list:
-            dict2.remove(i)    
+            dict2.remove(i)
     
     # for i in key_list:
     #     for j in dict1:
