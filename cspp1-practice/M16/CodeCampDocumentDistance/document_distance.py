@@ -28,7 +28,7 @@ def similarity(dict1, dict2):
             dict1.remove(i)
     for i in stopword:
         if i in dict2:
-            del dict2[i]
+            dict2.remove(i)
     print(dict1)
     print(dict2)
     
