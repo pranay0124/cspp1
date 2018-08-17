@@ -42,29 +42,29 @@ def similarity(dict1, dict2):
     
     '''removing stopwords'''
     stopword = load_stopwords("stopwords.txt")
-    key_list = stopword.keys()
+    key_list = list(stopword.keys())
 
-    # word_list = key_list[:]
+    word_list = key_list[:]
 
-    # for i in dict1:
-    #     if i in word_list:
-    #         dict1.remove(i)
+    for i in word_list:
+        if i in key_list:
+            dict1.remove(i)
 
-    # word_list = key_list[:]
+    word_list = key_list[:]
 
-    # for i in dict2:
-    #     if i in word_list:
-    #         dict2.remove(i)    
+    for i in word_list:
+        if i in key_list:
+            dict2.remove(i)    
     
-    for i in key_list:
-        for j in dict1:
-            if i == j:
-                dict1.remove(j)
+    # for i in key_list:
+    #     for j in dict1:
+    #         if i == j:
+    #             dict1.remove(j)
     
-    for i in key_list:
-        for j in dict2:
-            if i == j:
-                dict2.remove(j)
+    # for i in key_list:
+    #     for j in dict2:
+    #         if i == j:
+    #             dict2.remove(j)
     
     # print(dict1)
     # print(dict2)
