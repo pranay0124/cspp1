@@ -21,7 +21,7 @@ def calculation(d1):
         num += d1[i][0]* d1[i][1]
         den_1 += d1[i][0] ** 2
         den_2 += d1[i][1] ** 2
-    print(num, den_1, den_2)
+    #print(num, den_1, den_2)
     distance = num/(math.sqrt(den_1) * math.sqrt(den_2)) 
     return distance
 
