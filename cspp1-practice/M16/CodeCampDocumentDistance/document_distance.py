@@ -24,15 +24,13 @@ def similarity(dict1, dict2):
     dict1 = dict(collections.Counter(dict1))
 
     stopword = load_stopwords("stopwords.txt")
-    for word in stopword:
-        if word in dict1:
-            dict1 = dict1.pop(word)
-    # for i in stopword.keys():
-    #     if i in dict1:
-    #         dict1.remove(i)
-    # for i in stopword.keys():
-    #     if i in dict2:
-    #         dict2.remove(i)
+    remove_words = list(stopword.keys())
+    for i in remove_words:
+        if i in dict1:
+            dict1.remove(i)
+    for i in remove_words:
+        if i in dict2:
+            dict2.remove(i)
     print(dict1)
     
     
