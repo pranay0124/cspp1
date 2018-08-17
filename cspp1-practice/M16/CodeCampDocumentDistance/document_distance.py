@@ -82,7 +82,7 @@ def similarity(dict1, dict2):
     d1 = copy.deepcopy(combined_dict)
     for h in d1:
         if len(h) == 0:
-            del combined_dict(h)
+            del combined_dict[h]
     return calculation(combined_dict)
 
 def load_stopwords(filename):
