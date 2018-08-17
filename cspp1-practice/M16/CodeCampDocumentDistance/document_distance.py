@@ -38,7 +38,7 @@ def similarity(dict1, dict2):
         if i in dict_new:
             dict_new[i] += 1
         else:
-            dict_new.append[i]
+            dict_new.append(i)
 
     
     print(dict_new)
