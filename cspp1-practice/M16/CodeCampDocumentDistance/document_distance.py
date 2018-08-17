@@ -74,7 +74,7 @@ def similarity(dict1, dict2):
             combined_dict[k] = [dict1[k], dict2[k]]
         else:
             combined_dict[k] = [dict1[k], 0]
-    for l in combined_dict:
+    for l in dict2:
         if l not in combined_dict:
             combined_dict[l] = [0, dict2[l]]
 
