@@ -86,7 +86,8 @@ def similarity(dict1, dict2):
 
     temp_dict = copy.deepcopy(combined_dict)
     for k in temp_dict:
-        if len(k) == 0:
+        l_l = len(k)
+        if l_l == 0:
             del combined_dict[k]
     return calculation(combined_dict)
 
