@@ -42,9 +42,12 @@ def similarity(dict1, dict2):
     dict1 = dict(collections.Counter(dict1))
     dict2 = dict(collections.Counter(dict2))
 
-
+    
     print(dict1)
     print(dict2)
+    print(dict1.update(dict2))
+
+
     
 
 
