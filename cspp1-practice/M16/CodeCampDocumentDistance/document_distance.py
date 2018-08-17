@@ -20,6 +20,7 @@ def calculation(d1):
         num += value_1 * value_2
         den_1 += value_1 ** 2
         den_2 += value_2 ** 2
+        print(num, den_1, den_2)
     return num/(math.sqrt(den_1) * math.sqrt(den_2)) 
 
 def similarity(dict1, dict2):
