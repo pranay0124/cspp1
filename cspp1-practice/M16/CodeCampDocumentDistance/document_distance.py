@@ -46,8 +46,8 @@ def similarity(dict1, dict2):
     print(dict1)
     print(dict2)
     print("------------")
-    print(dict1.update(dict2))
-
+    dict1.update(dict2)
+    print(dict1)
 
     
 
