@@ -21,13 +21,13 @@ def similarity(dict1, dict2):
     
     dict1 = dict(collections.Counter(dict1))
     dict1 = dict(collections.Counter(dict1))
+    print(dict1)
 
     stopword = load_stopwords("stopwords.txt")
     for i in stopword:
     	dict1.pop(i,None)
     print(dict1)
-    print(stopword)
-
+    
 
 def load_stopwords(filename):
     '''
