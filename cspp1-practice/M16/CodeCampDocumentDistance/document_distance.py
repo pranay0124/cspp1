@@ -18,6 +18,10 @@ def similarity(dict1, dict2):
     for word in stopword:
     	if word in dict1:
     		dict1 = dict1.replace(word,"")
+    for word in stopword:
+    	if word in dict2:
+    		dict2 = dict2.replace(word,"")
+    print(dict1)
     
 
 
