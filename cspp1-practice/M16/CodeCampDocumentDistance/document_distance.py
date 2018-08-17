@@ -21,7 +21,8 @@ def calculation(d1):
         den_1 +=  d1[i][0] ** 2
         den_2 += d1[i][1] ** 2
     print(num, den_1, den_2)
-    return num/(math.sqrt(den_1) * math.sqrt(den_2)) 
+    distance = num/(math.sqrt(den_1) * math.sqrt(den_2)) 
+    return distance
 
 def similarity(dict1, dict2):
     '''lower case, removing special characters and numbers'''
