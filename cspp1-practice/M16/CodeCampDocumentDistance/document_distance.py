@@ -43,7 +43,7 @@ def similarity(dict1, dict2):
     dict2 = dict2.split()
 
     #removing stopwords
-    stopword = load_stopwords("stopwords.txt")
+    stopword = load_stopwords()
     key_list = list(stopword.keys())
 
     word_list = dict1[:]
@@ -90,11 +90,12 @@ def similarity(dict1, dict2):
             del combined_dict[k]
     return calculation(combined_dict)
 
-def load_stopwords(filename):
+def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
+    filename = "stopwords.txt"
     with open(filename, 'r') as filename:
         for line in filename:
             stopwords[line.strip()] = 0
