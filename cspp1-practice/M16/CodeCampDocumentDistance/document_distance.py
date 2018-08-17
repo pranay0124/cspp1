@@ -22,12 +22,11 @@ def similarity(dict1, dict2):
     dict1 = dict(collections.Counter(dict1))
     dict1 = dict(collections.Counter(dict1))
 
-    stopword_1 = load_stopwords("stopwords.txt")
-    stopword_2 = load_stopwords("stopwords.txt")
-    for i in stopword_1:
+    stopword = load_stopwords("stopwords.txt")
+    for i in stopword:
         dict1.pop(i, None)
-    for i in stopword_2:
-        dict2.pop(i, None)
+    # for i in stopword_2:
+    #     dict2.pop(i, None)
     
     
 
