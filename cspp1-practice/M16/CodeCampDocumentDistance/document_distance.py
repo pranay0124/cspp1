@@ -41,7 +41,7 @@ def similarity(dict1, dict2):
     
     '''removing stopwords'''
     stopword = load_stopwords("stopwords.txt")
-    key_list = stopword.keys()
+    key_list = list(stopword.keys())
 
     word_list = key_list[:]
 
