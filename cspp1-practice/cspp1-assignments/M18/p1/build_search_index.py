@@ -73,10 +73,9 @@ def build_search_index(docs):
     # return search index
     adict = {}
     for i in docs:
-    	adict = enumerate(word_list(i))
+    	adict = word_list(i)
     print(adict)
     return adict
-    
 
 
 # helper function to print the search index
