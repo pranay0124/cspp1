@@ -71,13 +71,15 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    adict = {}
     for i in docs:
-    	a_1 = word_list(i)
-    adict = dict(a_1)
+    	y = enumerate(i)
+        a += words_list(y[1])
+        adict += dict(collections.Counter(a))
+    
     print(adict)
-    return {adict}
+    return adict
 
+    	
 
 # helper function to print the search index
 # use this to verify how the search index looks
