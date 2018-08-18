@@ -60,7 +60,7 @@ def process_queries(search_index, queries):
     list_1 = []
     for i in queries:
         list_1.append(i)
-    search(search_index, list_1)
+    return search(search_index, list_1)
 
 def main():
     '''
