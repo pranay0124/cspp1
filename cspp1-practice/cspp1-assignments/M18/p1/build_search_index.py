@@ -82,7 +82,7 @@ def build_search_index(docs):
     #     adict = dict(collections.Counter(a_1))
     for index,value in enumerate(docs):
         a_1 = word_list(value)
-        adict = dict(collections.counter(a_1))
+        adict = dict(collections.Counter(a_1))
     print(a_1)
     print(adict)
     return adict
