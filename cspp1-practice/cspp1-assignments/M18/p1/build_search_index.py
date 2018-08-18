@@ -73,8 +73,8 @@ def build_search_index(docs):
     # return search index
     for i in docs:
         y = enumerate(i)
-        a += words_list(y[1])
-        adict += dict(collections.Counter(a))
+        a_1 += words_list(y[1])
+    adict += dict(collections.Counter(a_1))
     
     print(adict)
     return adict
