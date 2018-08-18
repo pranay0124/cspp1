@@ -1,0 +1,6 @@
+https://www.w3schools.com/python/python_ref_string.asp
+https://stackoverflow.com/questions/11277432/how-to-remove-a-key-from-a-python-dictionary
+https://stackoverflow.com/questions/10116518/im-getting-key-error-in-python
+https://stackoverflow.com/questions/522563/accessing-the-index-in-for-loops
+https://www.w3schools.com/python/showpython.asp?filename=demo_ref_enumerate
+https://www.programiz.com/python-programming/set
