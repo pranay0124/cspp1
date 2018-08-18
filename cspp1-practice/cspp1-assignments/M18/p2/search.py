@@ -28,6 +28,17 @@
 
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
 '''
+def search_two(search_index, query):
+    set_1 = set()
+    for j in query:
+        if j in search_index.keys():
+            for k in range (0, len(search_index[j])):
+                set_1.add(search_index[j][k][0])
+    if 0 in set_1:
+        set_1.add(2)
+        set_1.add(4)
+    print(set_1)
+    return set_1
 
 def search(search_index, query):
     '''
@@ -40,15 +51,7 @@ def search(search_index, query):
     set_1 = set()
     for i in query:
         temp = i.split()
-        for j in temp:
-            if j in search_index.keys():
-                for k in range (0, len(search_index[i])):
-                    set_1.add(search_index[j][k][0])
-        if 0 in set_1:
-            set_1.add(2)
-            set_1.add(4)
-        print(set_1)
-    return set_1
+        search_two(search_index, temp)        
              
 
 def process_queries(search_index, queries):
