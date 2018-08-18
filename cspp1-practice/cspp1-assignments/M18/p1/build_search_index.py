@@ -24,6 +24,11 @@ import re
 import collections
 import copy
 # helper function to load the stop words from a file
+def merge_two_dict(x,y):
+    z = x.copy()
+    z.update(y)
+    return z
+
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -81,18 +86,13 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    a_1 = []
-    adict = {}
-    # for i in docs:
-    #     a_1 =  word_list(i)
-    #     for j in 
-    #         adict = 
+    adict ={}
     for index,value in enumerate(docs):
-        adict += build_index(index, value)
-
-    print(a_1)
-    print(adict)
-    return adict
+        final_dict = merge_two_dict(adict ,build_index(index, value))
+    
+    
+    print(final_adict)
+    return final_adict
 
         
 
