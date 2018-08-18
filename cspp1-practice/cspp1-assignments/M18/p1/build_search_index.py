@@ -53,6 +53,7 @@ def word_list(text):
             words_list.remove(i)
     
     print(words_list)
+
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -97,6 +98,7 @@ def main():
 
     # call print to display the search index
     print_search_index(build_search_index(documents))
+    print(documents)
 
 if __name__ == '__main__':
     main()
