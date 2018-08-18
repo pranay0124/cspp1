@@ -87,13 +87,11 @@ def build_search_index(docs):
 
     # return search index
     adict ={}
-    final_dict= {}
+    final_dict = {}
     for index,value in enumerate(docs):
-        final_dict = merge_two_dict(adict ,build_index(index, value))
-    
-    
-    print(final_dict)
-    return final_dict
+        final_dict = merge_two_dict(adict,build_index(index, value))
+
+    return adict
 
         
 
