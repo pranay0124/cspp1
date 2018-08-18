@@ -53,6 +53,7 @@ def word_list(text):
             words_list.remove(i)
     
     print(words_list)
+    return words_list
 
 def build_search_index(docs):
     '''
