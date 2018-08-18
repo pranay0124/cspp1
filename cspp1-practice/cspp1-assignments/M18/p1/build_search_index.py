@@ -57,7 +57,7 @@ def word_list(text):
     print(words_list)
     return words_list
 
-def build_index(docs):
+def build_index(index,docs):
     a_1 = word_list(docs)
     adict = dict(collections.Counter(a_1))
     temp_adict = copy.deepcopy(adict)
@@ -88,7 +88,7 @@ def build_search_index(docs):
     #     for j in 
     #         adict = 
     for index,value in enumerate(docs):
-        adict += build_index(value)
+        adict += build_index(index, value)
 
     print(a_1)
     print(adict)
