@@ -24,7 +24,7 @@ import re
 import collections
 import copy
 # helper function to load the stop words from a file
-def merge_two_dict(x,y):
+def merge_two_dict(x, y):
     z = x.copy()
     z.update(y)
     return z
@@ -58,16 +58,16 @@ def word_list(text):
     for i in copy_words_list:
         if i in key_list:
             words_list.remove(i)
-    
+
     return words_list
 
-def build_index(index,docs):
+def build_index(index, docs):
     a_1 = word_list(docs)
     adict = dict(collections.Counter(a_1))
     temp_adict = copy.deepcopy(adict)
     for i in temp_adict:
-        adict[i] = [(index,temp_adict[i])]
-    return adict 
+        adict[i] = [(index, temp_adict[i])]
+    return adict
 
 def build_search_index(docs):
     '''
@@ -85,14 +85,12 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    adict ={}
+    adict = {}
     final_dict = {}
-    for index,value in enumerate(docs):
-        final_dict = merge_two_dict(adict,build_index(index, value))
+    for index, value in enumerate(docs):
+        final_dict = merge_two_dict(adict, build_index(index, value))
 
     return final_dict
-
-        
 
 # helper function to print the search index
 # use this to verify how the search index looks
