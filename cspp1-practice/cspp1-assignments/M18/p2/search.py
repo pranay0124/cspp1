@@ -48,6 +48,7 @@ def search(search_index, query):
             set_1.add(2)
             set_1.add(4)
         print(set_1)
+    return set_1
              
 
 def process_queries(search_index, queries):
