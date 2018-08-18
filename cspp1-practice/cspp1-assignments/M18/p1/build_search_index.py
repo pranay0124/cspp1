@@ -70,17 +70,19 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    pass
+    
+
 
 # helper function to print the search index
 # use this to verify how the search index looks
-def print_search_index(index):
-    '''
-        print the search index
-    '''
-    keys = sorted(index.keys())
-    for key in keys:
-        print(key, " - ", index[key])
+
+# def print_search_index(index):
+#     '''
+#         print the search index
+#     '''
+#     keys = sorted(index.keys())
+#     for key in keys:
+#         print(key, " - ", index[key])
 
 # main function that loads the docs from files
 def main():
@@ -97,7 +99,6 @@ def main():
         i += 1
 
     # call print to display the search index
-    print(documents)
     print_search_index(build_search_index(documents))
 
 
