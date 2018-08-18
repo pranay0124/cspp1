@@ -80,9 +80,9 @@ def build_search_index(docs):
     #         adict = 
     for index,value in enumerate(docs):
         a_1 = word_list(value)
-        adict = list(collections.Counter(a_1))
+        adict = dict(collections.Counter(a_1))
         for i in adict:
-            adict[i] = [(index,)]
+            adict[i] = [(index,adict['i'])]
     print(a_1)
     print(adict)
     return adict
