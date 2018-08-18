@@ -59,7 +59,6 @@ def word_list(text):
         if i in key_list:
             words_list.remove(i)
     
-    print(words_list)
     return words_list
 
 def build_index(index,docs):
