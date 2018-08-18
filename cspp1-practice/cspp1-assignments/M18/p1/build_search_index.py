@@ -84,7 +84,7 @@ def build_search_index(docs):
         adict = dict(collections.Counter(a_1))
         temp_adict = copy.deepcopy(adict)
         for i in temp_adict:
-            adict[i] = [(index,temp_adict['i'])]
+            adict[i] = [(index,temp_adict[i])]
     print(a_1)
     print(adict)
     return adict
