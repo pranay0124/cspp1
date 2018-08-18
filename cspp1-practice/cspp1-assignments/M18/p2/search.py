@@ -34,6 +34,7 @@ def search_two(search_index, query):
         if j in search_index.keys():
             for k in range (0, len(search_index[j])):
                 set_1.add(search_index[j][k][0])
+    print(set_1)
     return set_1
 
 def search(search_index, query):
