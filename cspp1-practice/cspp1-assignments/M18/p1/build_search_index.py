@@ -24,10 +24,11 @@ import re
 import collections
 import copy
 # helper function to load the stop words from a file
-def merge_two_dict(x, y):
-    z = x.copy()
-    z.update(y)
-    return z
+def merge_two_dict(x_1, y_1):
+    '''merge function'''
+    z_1 = x_1.copy()
+    z_1.update(y_1)
+    return z_1
 
 def load_stopwords(filename):
     '''
@@ -62,6 +63,7 @@ def word_list(text):
     return words_list
 
 def build_index(index, docs):
+    '''to build a dictionary with tuples'''
     a_1 = word_list(docs)
     adict = dict(collections.Counter(a_1))
     temp_adict = copy.deepcopy(adict)
