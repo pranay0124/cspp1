@@ -44,7 +44,7 @@ def search(search_index, query):
             if j in search_index.keys():
                 for k in range (0, len(search_index[i])):
                     set_1.add(search_index[j][k][0])
-                break
+
         print(set_1)
              
 
