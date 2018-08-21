@@ -21,8 +21,8 @@ class Cipher:
         small_alphabet = "-" + string.ascii_lowercase + string.ascii_lowercase
         upper_alphabet = "-" + string.ascii_uppercase + string.ascii_uppercase
         shifted_string = ""
-        a = len(self.value)
-        for i in range(0, a):
+        a_1 = len(self.value)
+        for i in range(0, a_1):
             if self.value[i] in small_alphabet:
                 shifted_string += small_alphabet[small_alphabet.index(self.value[i]) + shift_number]
             elif self.value[i] in upper_alphabet:
@@ -39,8 +39,8 @@ def main():
     '''
     data_input = input()
     shift_number = int(input())
-    Cipher_obj = Cipher(data_input)
-    print(Cipher_obj.shift(shift_number))
+    cipher_obj = Cipher(data_input)
+    print(cipher_obj.shift(shift_number))
     # print(Cipher.shift(data_input, shift_number))
 
 if __name__ == "__main__":
