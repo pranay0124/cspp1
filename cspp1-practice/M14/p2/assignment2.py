@@ -126,8 +126,6 @@ class Message(object):
                 new_msg.append(self.build_shift_dict(shift)[i])
         return ''.join(new_msg)
 
-### Helper code End
-
 def main():
     ''' Function to handle testcases '''
     inp = input()
