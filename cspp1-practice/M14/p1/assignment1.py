@@ -2,6 +2,7 @@
     Date : 21st August, 2018'''
 import string
 class Cipher:
+    '''main class- ceaser cipher'''
     def __init__(self, value):
         ''' initialising the value'''
         self.value = value
@@ -9,7 +10,7 @@ class Cipher:
     def __len__(self):
         ''' finding the length of the string'''
         count = 0
-        for i in self.value:
+        for in range self.value:
             count += 1
         return count
 
