@@ -128,23 +128,18 @@ class Message(object):
 
 ### Helper code End
 
-
-
-### Paste your implementation of the `PlaintextMessage` class here
-
-
-
 def main():
     ''' Function to handle testcases '''
     inp = input()
-    data = PlaintextMessage(inp, int(input()))
-    print(data.get_shift())
-    print(data.get_encrypting_dict())
-    print(data.get_message_text_encrypted())
-    data.change_shift(int(input()))
-    print(data.get_shift())
-    print(data.get_encrypting_dict())
-    print(data.get_message_text_encrypted())
-
+    data = Message(inp)
+    shift = int(input())
+    print(shift)
+    print(data.build_shift_dict())
+    print(data.apply_shift())
+    shift = int(input())
+    print(shift)
+    print(data.build_shift_dict())
+    print(data.apply_shift())
+    
 if __name__ == "__main__":
     main()
