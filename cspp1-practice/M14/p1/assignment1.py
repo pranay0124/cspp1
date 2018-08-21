@@ -2,14 +2,21 @@ import string
 class Cipher:
     def __init__(self, value):
         self.value = value
+
+    def __len__(self):
+        count = 0
+        for i in self.value:
+            count += 1
+        return count
+
     def shift(self, shift_number):
         small_alphabet = ""
         upper_alphabet = ""
         small_alphabet = "-" + string.ascii_lowercase + string.ascii_lowercase
         upper_alphabet = "-" + string.ascii_uppercase + string.ascii_uppercase
         shifted_string = ""
-        a = self.value
-        for i in range(0, len(a)):
+        a = len(self.value)
+        for i in range(0, a):
             if self.value[i] in small_alphabet:
                 shifted_string += small_alphabet[small_alphabet.index(self.value[i]) + shift_number]
             elif self.value[i] in upper_alphabet:
