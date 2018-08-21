@@ -1,3 +1,4 @@
+
 import string
 class Cipher:
     def __init__(self, value):
@@ -24,7 +25,7 @@ class Cipher:
             else:
                 shifted_string += self.value[i]
 
-        return(shifted_string)
+        return shifted_string
 
 
 def main():
