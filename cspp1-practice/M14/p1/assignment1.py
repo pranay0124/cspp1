@@ -11,7 +11,7 @@ class Cipher:
         for i in range (0, len(self.text)):
             if self.text[i] in small_alphabet:
                 shifted_string += small_alphabet[small_alphabet.index(self.text[i]) + shift_number]
-            elif self.text[i] in large_alphabet:
+            elif self.text[i] in upper_alphabet:
                 shifted_string += upper_alphabet[upper_alphabet.index(self.text[i]) + shift_number]
             else:
                 shifted_string += self.text[i]
