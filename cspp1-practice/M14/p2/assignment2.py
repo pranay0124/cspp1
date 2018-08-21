@@ -59,22 +59,22 @@ class Message(object):
         self.shift_dict = {}
 
     ### DO NOT MODIFY THIS METHOD ###
-    # def get_message_text(self):
-    #     '''
-    #     Used to safely access self.message_text outside of the class
+    def get_message_text(self):
+        '''
+        Used to safely access self.message_text outside of the class
 
-    #     Returns: self.message_text
-    #     '''
-    #     return self.message_text
+        Returns: self.message_text
+        '''
+        return self.message_text
 
-    # ### DO NOT MODIFY THIS METHOD ###
-    # def get_valid_words(self):
-    #     '''
-    #     Used to safely access a copy of self.valid_words outside of the class
+    ### DO NOT MODIFY THIS METHOD ###
+    def get_valid_words(self):
+        '''
+        Used to safely access a copy of self.valid_words outside of the class
 
-    #     Returns: a COPY of self.valid_words
-    #     '''
-    #     return self.valid_words[:]
+        Returns: a COPY of self.valid_words
+        '''
+        return self.valid_words[:]
 
     def build_shift_dict(self, shift):
         '''
