@@ -27,7 +27,7 @@ def main():
     shift_number = int(input())
     Cipher_obj = Cipher(data_input)
     Cipher_obj.shift(shift_number)
-    print(Cipher.shift(shift_number))
+    print(Cipher.shift(data_input))
 
 if __name__ == "__main__":
     main()
