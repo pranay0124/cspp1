@@ -1,16 +1,20 @@
-
+''' Author : Pranay Kumar Y
+    Date : 21st August, 2018'''
 import string
 class Cipher:
     def __init__(self, value):
+        ''' initialising the value'''
         self.value = value
 
     def __len__(self):
+        ''' finding the length of the string'''
         count = 0
         for i in self.value:
             count += 1
         return count
 
     def shift(self, shift_number):
+        '''shifting the string according to the cipher'''
         small_alphabet = ""
         upper_alphabet = ""
         small_alphabet = "-" + string.ascii_lowercase + string.ascii_lowercase
