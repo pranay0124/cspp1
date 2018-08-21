@@ -10,7 +10,7 @@ class Cipher:
     def __len__(self):
         ''' finding the length of the string'''
         count = 0
-        for in range self.value:
+        for i in self.value:
             count += 1
         return count
 
