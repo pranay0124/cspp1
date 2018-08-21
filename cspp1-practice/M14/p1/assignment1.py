@@ -8,8 +8,8 @@ class Cipher:
         small_alphabet = "-" + string.ascii_lowercase + string.ascii_lowercase
         upper_alphabet = "-" + string.ascii_uppercase + string.ascii_uppercase
         shifted_string = ""
-        a = len(self.value)
-        for i in range(a):
+        a = self.value
+        for i in range(0, len(a)):
             if self.value[i] in small_alphabet:
                 shifted_string += small_alphabet[small_alphabet.index(self.value[i]) + shift_number]
             elif self.value[i] in upper_alphabet:
