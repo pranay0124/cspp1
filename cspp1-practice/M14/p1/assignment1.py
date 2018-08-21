@@ -4,8 +4,8 @@ class Cipher:
     def shift(self, shift_number):
         small_alphabet = ""
         upper_alphabet = ""
-        small_alphabet = "-" + string.ascii_lowercase() + string.ascii_lowercase()
-        upper_alphabet = "-" + string.ascii_uppercase() + string.ascii_uppercase()
+        small_alphabet = "-" + string.ascii_lowercase + string.ascii_lowercase
+        upper_alphabet = "-" + string.ascii_uppercase + string.ascii_uppercase
         shifted_string = " "
         for i in range (0, len(self.text)):
             if self.text[i] in small_alphabet:
