@@ -1,3 +1,4 @@
+import string
 class Cipher:
     def __init__(self, text):
         self.text = text
