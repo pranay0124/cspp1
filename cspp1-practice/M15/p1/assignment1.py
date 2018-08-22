@@ -236,8 +236,7 @@ class CiphertextMessage(Message):
         self.max_valid_words = 0
         self.encrypting_dict = {}
         self.message_text_encrypted = ""
-
-
+        self.decrypted_message = ()
     def decrypt_message(self):
         '''
         Decrypt self.message_text by trying every possible shift value
