@@ -264,13 +264,13 @@ def decrypt_story():
     ''' Decrypt the story text using CiphertextMessage class and return the
         shift value and decrypted string in a tuple.
     '''
-    pass #delete this line when you write your code.
+    decryption_code = CiphertextMessage(get_story_string())
+    return decryption_code.decrypt_message()
 
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
-    # print(decrypt_story())
-    print((10, 'Jack Florey is a mythical character created on the spur of a moment to help cover an insufficiently planned hack. He has been registered for classes at MIT twice before, but has reportedly never passed a class. It has been the tradition of the residents of East Campus to become Jack Florey for a few nights each year to educate incoming students in the ways, means, and ethics of hacking.')
-)
+    print(decrypt_story())
+
 if __name__ == '__main__':
     main()
