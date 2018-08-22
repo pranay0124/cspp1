@@ -230,8 +230,9 @@ class CiphertextMessage(Message):
         '''
         super(CiphertextMessage, self).__init__(text)
         self.message_text = text
-        self.valid_words = load_words("words.txt")[:]
-        self.max_valid_words = 0
+        self.valid_words = load_words("words.txt")
+        self.encrypting_dict = {}
+        self.message_text_encrypted = ""
 
 
     def decrypt_message(self):
