@@ -6,10 +6,10 @@ def mult_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    
+
     if c_1 == r_2:
         multiplication_matrix = []
-        for i in range (r_1):
+        for i in range(r_1):
             temp = []
             for j in range(r_1):
                 sum_val = 0
