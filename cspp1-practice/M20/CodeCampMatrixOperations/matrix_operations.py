@@ -1,6 +1,6 @@
 ''' Author : Pranay Kumar Y
     Date : 23rd August,2018'''
-def mult_matrix(m_1, m_2, r_1, r_2, c_1):
+def mult_matrix(m_1, m_2, r_1, r_2, c_1): #c_2 is removed for pylint
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -21,7 +21,7 @@ def mult_matrix(m_1, m_2, r_1, r_2, c_1):
             multiplication_matrix.append(temp)
         return multiplication_matrix
     print("Error: Matrix shapes invalid for mult")
-    return None
+    return None #for pylint
 
 def add_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
     '''
@@ -41,7 +41,7 @@ def add_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
             addition_matrix.append(temp)
         return addition_matrix
     print("Error: Matrix shapes invalid for addition")
-    return None
+    return None #for pylint
 
 def read_matrix():
     '''
@@ -87,7 +87,7 @@ def main():
 
     if flag_1 and flag_2:
         print(add_matrix(matrix_1, matrix_2, row_1, row_2, column_1, column_2))
-        print(mult_matrix(matrix_1, matrix_2, row_1, row_2, column_1))
+        print(mult_matrix(matrix_1, matrix_2, row_1, row_2, column_1)) #column_2 is also sent
 
         # print(addition_matrix)
         # print(multiplication_matrix)
