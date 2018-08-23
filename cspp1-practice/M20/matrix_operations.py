@@ -59,7 +59,7 @@ def read_matrix():
         for j in range (m):
             mat[i].append(int(temp[j]))
 
-    print(mat)
+    #print(mat)
     
     flag = True
     for i in mat:
