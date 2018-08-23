@@ -58,6 +58,8 @@ def read_matrix():
         temp = input().split()
         for j in range (n):
             mat[i].append(int(temp[j]))
+
+    print(mat)
     
     flag = True
     for i in mat:
@@ -66,7 +68,7 @@ def read_matrix():
             count += 1
         if count != n:
             flag = False
-        
+            
     return mat, m, n, flag
 
 
@@ -75,17 +77,14 @@ def main():
 
     (matrix_2, row_2, column_2,flag) = read_matrix()
 
-
     if flag == True:
         addition_matrix = add_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
-
         multiplication_matrix = mult_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
         print(addition_matrix)
         print(multiplication_matrix)
 
     else:
         print("Error: Invalid input for the matrix")
-
     
 if __name__ == '__main__':
     main()
