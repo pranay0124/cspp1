@@ -69,6 +69,7 @@ def read_matrix():
         if count != n:
             flag = False
             
+    print(flag)
     return mat, m, n, flag
 
 
