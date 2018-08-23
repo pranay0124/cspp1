@@ -69,16 +69,15 @@ def read_matrix():
         if count != n:
             flag = False
             
-    print(flag)
     return mat, m, n, flag
 
 
 def main():
-    (matrix_1, row_1, column_1,flag) = read_matrix()
+    (matrix_1, row_1, column_1,flag_1) = read_matrix()
 
-    (matrix_2, row_2, column_2,flag) = read_matrix()
+    (matrix_2, row_2, column_2,flag_2) = read_matrix()
 
-    if flag == True:
+    if flag_1 == True and flag_2 == True:
         addition_matrix = add_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
         multiplication_matrix = mult_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
         print(addition_matrix)
