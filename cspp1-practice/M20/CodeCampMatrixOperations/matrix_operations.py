@@ -62,7 +62,7 @@ def read_matrix():
     #         mat[i].append(int(temp[j]))
     
     for i in range(0, m):
-        mat.append(list(map(int,input().split())))
+        mat.append(list(map(int, input().split())))
     
     flag = True
     for i in mat:
@@ -76,15 +76,15 @@ def read_matrix():
 
 
 def main():
-    (matrix_1, row_1, column_1,flag_1) = read_matrix()
+    (matrix_1, row_1, column_1, flag_1) = read_matrix()
 
-    (matrix_2, row_2, column_2,flag_2) = read_matrix()
+    (matrix_2, row_2, column_2, flag_2) = read_matrix()
 
     #print(flag_1, flag_2)
 
     if flag_1 == True and flag_2 == True:
-        print(add_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2))
-        print(mult_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2))
+        print(add_matrix(matrix_1, matrix_2, row_1, row_2, column_1, column_2))
+        print(mult_matrix(matrix_1, matrix_2, row_1, row_2, column_1, column_2))
 
         # print(addition_matrix)
         # print(multiplication_matrix)
