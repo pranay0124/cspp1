@@ -52,14 +52,15 @@ def read_matrix():
     m = int(dimensions[0])
     n = int(dimensions[1])
     mat = []
-    for i in range(n):
-        mat.append([])
-    for i in range (n):
-        temp = input().split()
-        for j in range (m):
-            mat[i].append(int(temp[j]))
-
-    #print(mat)
+    # for i in range(n):
+    #     mat.append([])
+    # for i in range (n):
+    #     temp = input().split()
+    #     for j in range (n):
+    #         mat[i].append(int(temp[j]))
+    
+    for i in range(0, m):
+        mat.append(list(map(int,input().split())))
     
     flag = True
     for i in mat:
@@ -77,7 +78,7 @@ def main():
 
     (matrix_2, row_2, column_2,flag_2) = read_matrix()
 
-    print(flag_1, flag_2)
+    #print(flag_1, flag_2)
 
     if flag_1 == True and flag_2 == True:
         addition_matrix = add_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
