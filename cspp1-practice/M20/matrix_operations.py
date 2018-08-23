@@ -32,9 +32,9 @@ def add_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
     
     if r_1 == r_2 and c_1 == c_2:
         addition_matrix = []
-        for i in range (c_1):
+        for i in range(0, c_1):
             temp = []
-            for j in range (c_1):
+            for j in range(0, c_1):
                 temp.append(m_1[i][j] + m_2[i][j])
             addition_matrix.append(temp)
         return addition_matrix
