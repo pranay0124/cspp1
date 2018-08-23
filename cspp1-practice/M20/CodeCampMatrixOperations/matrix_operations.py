@@ -1,3 +1,5 @@
+''' Author : Pranay Kumar Y
+    Date : 23rd August,2018'''
 def mult_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -29,7 +31,7 @@ def add_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    
+
     if r_1 == r_2 and c_1 == c_2:
         addition_matrix = []
         for i in range(0, r_1):
@@ -49,7 +51,7 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    
+
     dimensions = input().split(",")
     m = int(dimensions[0])
     n = int(dimensions[1])
