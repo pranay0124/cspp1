@@ -54,9 +54,9 @@ def read_matrix():
     mat = []
     for i in range(n):
         mat.append([])
-    for i in range (n):
+    for i in range (m):
         temp = input().split()
-        for j in range (m):
+        for j in range (n):
             mat[i].append(int(temp[j]))
 
     #print(mat)
