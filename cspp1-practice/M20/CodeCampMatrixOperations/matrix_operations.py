@@ -76,6 +76,7 @@ def read_matrix():
 
 
 def main():
+    '''main function'''
     (matrix_1, row_1, column_1, flag_1) = read_matrix()
 
     (matrix_2, row_2, column_2, flag_2) = read_matrix()
