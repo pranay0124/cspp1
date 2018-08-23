@@ -51,8 +51,8 @@ def read_matrix():
     '''
 
     dimensions = input().split(",")
-    m = int(dimensions[0])
-    n = int(dimensions[1])
+    row_value = int(dimensions[0])
+    column_value = int(dimensions[1])
     mat = []
     # for i in range(n):
     #     mat.append([])
@@ -61,7 +61,7 @@ def read_matrix():
     #     for j in range (n):
     #         mat[i].append(int(temp[j]))
 
-    for i in range(0, m):
+    for i in range(0, row_value):
         mat.append(list(map(int, input().split())))
 
     flag = True
@@ -69,10 +69,10 @@ def read_matrix():
         count = 0
         for j in i:
             count += 1
-        if count != n:
+        if count != column_value:
             flag = False
 
-    return mat, m, n, flag
+    return mat, row_value, column_value, flag
 
 
 def main():
