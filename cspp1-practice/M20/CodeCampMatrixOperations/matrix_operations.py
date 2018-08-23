@@ -13,9 +13,9 @@ def mult_matrix(m_1, m_2, r_1, r_2, c_1): #c_2 is removed for pylint
         multiplication_matrix = []
         for i in range(r_1):
             temp = []
-            for j in range(r_1):
+            for j in range(c_1):
                 sum_val = 0
-                for k in range(c_1):
+                for k in range(r_1):
                     sum_val = sum_val + (m_1[i][k] * m_2[k][j])
                 temp.append(sum_val)
             multiplication_matrix.append(temp)
