@@ -80,11 +80,12 @@ def main():
         addition_matrix = add_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
 
         multiplication_matrix = mult_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
+        print(addition_matrix)
+        print(multiplication_matrix)
+
     else:
         print("Error: Invalid input for the matrix")
 
-    print(addition_matrix)
-    print(multiplication_matrix)
-
+    
 if __name__ == '__main__':
     main()
