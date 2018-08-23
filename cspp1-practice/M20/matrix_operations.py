@@ -19,7 +19,7 @@ def mult_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
             multiplication_matrix.append(temp)
         return multiplication_matrix
     else:
-        return "Error: Matrix shapes invalid for mult"
+        print("Error: Matrix shapes invalid for mult")
 
 def add_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
     '''
@@ -39,7 +39,7 @@ def add_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
             addition_matrix.append(temp)
         return addition_matrix
     else:
-        return "Error: Matrix shapes invalid for addition"
+        print("Error: Matrix shapes invalid for addition")
 
 def read_matrix():
     '''
