@@ -6,8 +6,9 @@ def mult_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    multiplication_matrix = []
+    
     if c_1 == r_2:
+        multiplication_matrix = []
         for i in range (r_1):
             temp = []
             for j in range(r_1):
@@ -28,8 +29,9 @@ def add_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    addition_matrix = []
+    
     if r_1 == r_2 and c_1 == c_2:
+        addition_matrix = []
         for i in range (c_1):
             temp = []
             for j in range (c_1):
