@@ -47,6 +47,7 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
+    
     dimensions = input().split(",")
     m = int(dimensions[0])
     n = int(dimensions[1])
@@ -57,18 +58,31 @@ def read_matrix():
         temp = input().split()
         for j in range (n):
             mat[i].append(int(temp[j]))
-    return mat, m, n
+    
+    flag = True
+    for i in mat:
+        count = 0
+        for j in i:
+            count += 1
+        if count != column_1:
+            flag = False
+        
+    return mat, m, n, flag
 
 
 def main():
-    (matrix_1, row_1, column_1) = read_matrix()
+    (matrix_1, row_1, column_1,flag) = read_matrix()
 
-    (matrix_2, row_2, column_2) = read_matrix()
+    (matrix_2, row_2, column_2,flag) = read_matrix()
 
-    addition_matrix = add_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
 
-    multiplication_matrix = mult_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
-    
+    if flag == True:
+        addition_matrix = add_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
+
+        multiplication_matrix = mult_matrix(matrix_1,matrix_2,row_1,row_2,column_1,column_2)
+    else:
+        print("Error: Invalid input for the matrix")
+
     print(addition_matrix)
     print(multiplication_matrix)
 
