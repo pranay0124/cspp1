@@ -1,6 +1,6 @@
 ''' Author : Pranay Kumar Y
     Date : 23rd August,2018'''
-def mult_matrix(m_1, m_2, r_1, r_2, c_1, c_2):
+def mult_matrix(m_1, m_2, r_1, r_2, c_1):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -85,7 +85,7 @@ def main():
 
     if flag_1 and flag_2 :
         print(add_matrix(matrix_1, matrix_2, row_1, row_2, column_1, column_2))
-        print(mult_matrix(matrix_1, matrix_2, row_1, row_2, column_1, column_2))
+        print(mult_matrix(matrix_1, matrix_2, row_1, row_2, column_1))
 
         # print(addition_matrix)
         # print(multiplication_matrix)
