@@ -64,7 +64,7 @@ def read_matrix():
         count = 0
         for j in i:
             count += 1
-        if count != column_1:
+        if count != n:
             flag = False
         
     return mat, m, n, flag
