@@ -17,7 +17,7 @@ def is_diagonal(mat):
     return False
 
 def is_valid(mat):
-    if 
+    pass
 
 def main():
     rows = 3
