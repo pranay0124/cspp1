@@ -56,7 +56,7 @@ def delete_person(network, arg1):
     #         print(network)
     #         #network.remove(str(arg1))
     if arg1 in network:
-         del network[arg1]
+        del network[arg1]
     return network
 
 def main():
@@ -65,7 +65,7 @@ def main():
     '''
     network = eval(input())
     lines = int(input())
-    for i in range(lines):
+    for _ in range(lines):
         line = input()
         output = line.split(" ")
         if output[0] == "follow":
