@@ -5,7 +5,7 @@ def is_horizontal(mat):
     return False
 
 def is_vertical(mat):
-    for i in range(0,3):
+    for i in range(0, 3):
         if mat[0][i] == mat[1][i] and mat[0][i] == mat[2][i]:
             return mat[0][i]
     return False
@@ -48,7 +48,7 @@ def main():
     for i in range(rows):
         mat.append(list(input().split()))
     count_flag = is_count(mat)
-    if count_flag == False:
+    if count_flag == False or (flag_h != False and flag_v != False):
         print("invalid game")
     else:
         valid_flag = is_valid(mat)
@@ -60,8 +60,8 @@ def main():
             flag_d = is_diagonal(mat)
             if flag_h == False and flag_v == False and flag_d == False:
                 print("draw")
-            elif flag_h != False and flag_v != False:
-                print("invalid game")
+            # elif flag_h != False and flag_v != False:
+            #     print("invalid game")
             elif flag_h != False:
                 print(flag_h)
             elif flag_v != False:
