@@ -87,13 +87,9 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    adict = {}
-    final_dict = {}
-    for index, value in enumerate(docs):
-        dict_2 = build_index(index, value)
-    print(dict_2)
-
-    return final_dict
+    for i,j in enumerate(docs):
+        adict = build_index(i, j)
+    print(adict)
 
 # helper function to print the search index
 # use this to verify how the search index looks
