@@ -45,7 +45,6 @@ def is_count(mat):
     # sum = 0
     # for i in mat:
     #     sum += i.count("x") + i.count("o") + i.count(".")
-    flag = 0
     for i in mat:
         for j in i:
             if j == 'x':
@@ -55,10 +54,6 @@ def is_count(mat):
             else:
                 count_sp += 1
     if count_x > 5 or count_o > 5:
-        flag = 1
-    if count_x == count_o:
-        flag = 1
-    if flag == 1:
         return False
     return True
 
