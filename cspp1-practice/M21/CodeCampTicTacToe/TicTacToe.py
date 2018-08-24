@@ -61,7 +61,7 @@ def main():
     flag_v = is_vertical(mat)
     flag_d = is_diagonal(mat)
     count_flag = is_count(mat)
-    if count_flag == False:
+    if not count_flag:
         print("invalid game")
     else:
         valid_flag = is_valid(mat)
