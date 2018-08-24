@@ -1,13 +1,13 @@
 def is_horizontal(mat):
     for i in mat:
         if i[0] == i[1] and i[0] == i[2]:
-            return i[0]
+            return i[0], 1
     return False
 
 def is_vertical(mat):
     for i in range(0,3):
         if mat[0][i] == mat[1][i] and mat[0][i] == mat[2][i]:
-            return mat[0][i]
+            return mat[0][i], 1
     return False
 
 def is_diagonal(mat):
@@ -55,11 +55,13 @@ def main():
         if valid_flag == False:
             print("invalid input")
         else:
-            flag_h = is_horizontal(mat)
-            flag_v = is_vertical(mat)
+            (flag_h, count_hf) = is_horizontal(mat)
+            (flag_v, count_vf) = is_vertical(mat)
             flag_d = is_diagonal(mat)
             if flag_h == False and flag_v == False and flag_d == False:
                 print("draw")
+            elif count_hf = 1 and count_vf = 1:
+                print("invalid game")
             elif flag_h != False:
                 print(flag_h)
             elif flag_v != False:
@@ -68,9 +70,6 @@ def main():
                 print(flag_d)
             else:
                 print("invalid game")
-    
 
-
-    
 if __name__ == '__main__':
     main()
