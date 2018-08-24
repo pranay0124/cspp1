@@ -1,13 +1,15 @@
 def is_horizontal(mat):
     for i in mat:
         if i[0] == i[1] and i[0] == i[2]:
-            return i[0], 1
+            count = 1
+            return i[0], count
     return False
 
 def is_vertical(mat):
     for i in range(0,3):
         if mat[0][i] == mat[1][i] and mat[0][i] == mat[2][i]:
-            return mat[0][i], 1
+            count = 1
+            return mat[0][i], count
     return False
 
 def is_diagonal(mat):
