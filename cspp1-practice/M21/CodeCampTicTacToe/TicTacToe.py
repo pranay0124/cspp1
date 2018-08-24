@@ -21,7 +21,7 @@ def is_valid(mat):
     for i in mat:
         for j in i:
             temp_set.add(j)
-    if ('x' not in temp_set and 'o' not in temp_set) or '.' not in temp_set:
+    if ('x' in temp_set and 'o' in temp_set) or '.' in temp_set:
         return True
     return False
 
