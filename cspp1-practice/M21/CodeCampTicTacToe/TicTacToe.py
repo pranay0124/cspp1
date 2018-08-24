@@ -47,25 +47,26 @@ def main():
     for i in range(rows):
         mat.append(list(input().split()))
     count_flag = is_count(mat)
-    valid_flag = is_valid(mat)
-    flag_h = is_horizontal(mat)
-    flag_v = is_vertical(mat)
-    flag_d = is_diagonal(mat)
     if count_flag == False:
-        print("invalid game") 
-    
-    elif valid_flag == False:
-        print("invalid input")
-    elif flag_h == False and flag_v == False and flag_d == False:
-        print("draw")
-    elif flag_h != False:
-        print(flag_h)
-    elif flag_v != False:
-        print(flag_v)
-    elif flag_d != False:
-        print(flag_d)
-    else:
         print("invalid game")
+    else:
+        valid_flag = is_valid(mat)
+        if valid_flag == False:
+            print("invalid input")
+        else:
+            flag_h = is_horizontal(mat)
+            flag_v = is_vertical(mat)
+            flag_d = is_diagonal(mat)
+            if flag_h == False and flag_v == False and flag_d == False:
+                print("draw")
+            elif flag_h != False:
+                print(flag_h)
+            elif flag_v != False:
+                print(flag_v)
+            elif flag_d != False:
+                print(flag_d)
+            else:
+                print("invalid game")
     
 
 
