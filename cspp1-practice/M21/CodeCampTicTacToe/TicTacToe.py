@@ -45,6 +45,7 @@ def is_count(mat):
     # sum = 0
     # for i in mat:
     #     sum += i.count("x") + i.count("o") + i.count(".")
+    flag = 0
     for i in mat:
         for j in i:
             if j == 'x':
