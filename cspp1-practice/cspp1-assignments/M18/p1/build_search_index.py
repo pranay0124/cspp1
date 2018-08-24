@@ -85,9 +85,8 @@ def build_search_index(docs_list):
                 final_dict[word].append((k, a_1[k][word]))
             else:
                 final_dict[word] = [(k, a_1[k][word])]
-    return final_dict 
+    return final_dict
 
-    
 # helper function to print the search index
 # use this to verify how the search index looks
 
