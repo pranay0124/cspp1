@@ -57,7 +57,7 @@ def word_list(text):
 
     return words_list
 
-def build_search_index(docs):
+def build_search_index(docs_list):
     '''
         Process the docs step by step as given below
     '''
@@ -74,9 +74,9 @@ def build_search_index(docs):
 
     # return search index
     a_1 = []
+    docs = docs_list
     final_dict = {}
     for i,j in enumerate(docs):
-        print(i)
         a_1[i] = word_list(docs[i])
         a_1[i] = collections.Counter(a_1[i])
     for k,l in enumerate(a_1):
