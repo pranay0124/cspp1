@@ -22,7 +22,8 @@ def is_valid(mat):
         for j in i:
             temp_set.add(j)
     if ('x' in temp_set and 'o' in temp_set) or '.' in temp_set:
-        return True
+        if 'p' not in temp_set:
+            return True
     return False
 
 def is_count(mat):
