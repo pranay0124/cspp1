@@ -82,7 +82,7 @@ def build_search_index(docs_list):
     for k,l in enumerate(a_1):
         for word in l:
             if word in final_dict:
-                final_dict[word].append(k,a_1[k][word])
+                final_dict[word].append((k,a_1[k][word]))
             else:
                 final_dict[word] = [(k,a_1[k][word])]
     return final_dict 
