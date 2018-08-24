@@ -54,7 +54,7 @@ def main():
     if count_flag == False:
         print("invalid game") 
     
-    if valid_flag == False:
+    elif valid_flag == False:
         print("invalid input")
     elif flag_h == False and flag_v == False and flag_d == False:
         print("draw")
