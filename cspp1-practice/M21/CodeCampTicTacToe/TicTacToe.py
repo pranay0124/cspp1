@@ -1,22 +1,28 @@
+''' Author : Pranay Kumar Y
+    Date : 24th August, 2018'''
 def is_horizontal(mat):
+    '''horizontal function'''
     for i in mat:
         if i[0] == i[1] and i[0] == i[2]:
             return i[0]
     return False
 
 def is_vertical(mat):
+    '''vertical function'''
     for i in range(0, 3):
         if mat[0][i] == mat[1][i] and mat[0][i] == mat[2][i]:
             return mat[0][i]
     return False
 
 def is_diagonal(mat):
-    c = mat[1][1]
-    if (c == mat[0][2] and c == mat[2][0]) or (c == mat[0][0] and c == mat[2][2]):
-        return c
+    '''diagonal function'''
+    center_1 = mat[1][1]
+    if (center_1 == mat[0][2] and center_1 == mat[2][0]) or (center_1 == mat[0][0] and center_1 == mat[2][2]):
+        return center_1
     return False
 
 def is_valid(mat):
+    '''if the game has valid characters'''
     temp_set = set()
     for i in mat:
         for j in i:
@@ -27,6 +33,7 @@ def is_valid(mat):
     return False
 
 def is_count(mat):
+    '''if a single character is repeated more than other character'''
     count_x = 0
     count_o = 0
     count_sp = 0
@@ -42,11 +49,14 @@ def is_count(mat):
         return False
     else:
         True
+
 def main():
+    '''main tictactoe function'''
     rows = 3
     mat = []
     for i in range(rows):
         mat.append(list(input().split()))
+
     flag_h = is_horizontal(mat)
     flag_v = is_vertical(mat)
     flag_d = is_diagonal(mat)
