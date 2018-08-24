@@ -65,10 +65,10 @@ def main():
         print("invalid game")
     else:
         valid_flag = is_valid(mat)
-        if valid_flag == False:
+        if not valid_flag:
             print("invalid input")
         else:
-            if flag_h == False and flag_v == False and flag_d == False:
+            if not flag_h  and not flag_v and not flag_d:
                 print("draw")
             # elif flag_h != False and flag_v != False:
             #     print("invalid game")
