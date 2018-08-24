@@ -73,11 +73,11 @@ def build_search_index(docs_list):
         # add or update the words of the doc to the search index
 
     # return search index
-    a_1 = []
-    docs = docs_list
+    a_1 = docs_list
+    #docs = docs_list
     final_dict = {}
-    for i,j in enumerate(docs):
-        a_1[i] = word_list(docs[i])
+    for i,j in enumerate(a_1):
+        a_1[i] = word_list(a_1[i])
         a_1[i] = collections.Counter(a_1[i])
     for k,l in enumerate(a_1):
         for word in l:
