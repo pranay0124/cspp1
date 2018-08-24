@@ -42,8 +42,10 @@ def main():
         print(flag_h)
     elif flag_v != False:
         print(flag_v)
-    else:
+    elif flag_d != False:
         print(flag_d)
+    else:
+        print("invalid game")
     
 
 
