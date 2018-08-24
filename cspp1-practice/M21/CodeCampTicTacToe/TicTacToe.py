@@ -44,7 +44,7 @@ def main():
         print(flag_v)
     else:
         print(flag_d)
-    print(valid_flag)
+    
 
 
     
