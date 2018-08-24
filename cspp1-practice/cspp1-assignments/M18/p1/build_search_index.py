@@ -62,11 +62,6 @@ def word_list(text):
 
     return words_list
 
-def build_index(index, docs):
-    '''to build a dictionary with tuples'''
-    
-    return adict
-
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -85,9 +80,9 @@ def build_search_index(docs):
     # return search index
     a_1 = word_list(docs)
     adict = dict(collections.Counter(a_1))
-    temp_adict = copy.deepcopy(adict)
-    for i in temp_adict:
-        adict[i] = [(index, temp_adict[i])]
+    # temp_adict = copy.deepcopy(adict)
+    # for i in temp_adict:
+    #     adict[i] = [(index, temp_adict[i])]
     print(adict)
 
 # helper function to print the search index
