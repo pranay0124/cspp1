@@ -53,19 +53,19 @@ def main():
     flag_d = is_diagonal(mat)
     if count_flag == False:
         print("invalid game") 
+    
+    if valid_flag == False:
+        print("invalid input")
+    elif flag_h == False and flag_v == False and flag_d == False:
+        print("draw")
+    elif flag_h != False:
+        print(flag_h)
+    elif flag_v != False:
+        print(flag_v)
+    elif flag_d != False:
+        print(flag_d)
     else:
-        if valid_flag == False:
-            print("invalid input")
-        elif flag_h == False and flag_v == False and flag_d == False:
-            print("draw")
-        elif flag_h != False:
-            print(flag_h)
-        elif flag_v != False:
-            print(flag_v)
-        elif flag_d != False:
-            print(flag_d)
-        else:
-            print("invalid game")
+        print("invalid game")
     
 
 
