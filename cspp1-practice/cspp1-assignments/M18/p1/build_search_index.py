@@ -22,7 +22,6 @@
 '''
 import re
 import collections
-import copy
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -76,11 +75,11 @@ def build_search_index(docs_list):
     a_1 = docs_list
     #docs = docs_list
     final_dict = {}
-    for i, j in enumerate(a_1):
+    for i, _ in enumerate(a_1):
         a_1[i] = word_list(a_1[i])
         a_1[i] = collections.Counter(a_1[i])
-    for k, l in enumerate(a_1):
-        for word in l:
+    for k, l_1 in enumerate(a_1):
+        for word in l_1:
             if word in final_dict:
                 final_dict[word].append((k, a_1[k][word]))
             else:
