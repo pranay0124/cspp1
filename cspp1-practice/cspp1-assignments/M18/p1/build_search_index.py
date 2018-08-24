@@ -76,15 +76,15 @@ def build_search_index(docs_list):
     a_1 = docs_list
     #docs = docs_list
     final_dict = {}
-    for i,j in enumerate(a_1):
+    for i, j in enumerate(a_1):
         a_1[i] = word_list(a_1[i])
         a_1[i] = collections.Counter(a_1[i])
-    for k,l in enumerate(a_1):
+    for k, l in enumerate(a_1):
         for word in l:
             if word in final_dict:
-                final_dict[word].append((k,a_1[k][word]))
+                final_dict[word].append((k, a_1[k][word]))
             else:
-                final_dict[word] = [(k,a_1[k][word])]
+                final_dict[word] = [(k, a_1[k][word])]
     return final_dict 
 
     
