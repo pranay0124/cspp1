@@ -6,6 +6,10 @@ def is_horizontal(mat):
         if i[0] == i[1] and i[0] == i[2]:
             return i[0]
     return False
+    # for i in range(len(mat)):
+    #     if mat[i][0] == mat[i][1] and mat[i][0] == mat[i][2]:
+    #         return mat[i][0]
+    # return False
 
 def is_vertical(mat):
     '''vertical function'''
@@ -38,6 +42,9 @@ def is_count(mat):
     count_x = 0
     count_o = 0
     count_sp = 0
+    # sum = 0
+    # for i in mat:
+    #     sum += i.count("x") + i.count("o") + i.count(".")
     for i in mat:
         for j in i:
             if j == 'x':
@@ -47,6 +54,10 @@ def is_count(mat):
             else:
                 count_sp += 1
     if count_x > 5 or count_o > 5:
+        flag = 1
+    if count_x = 3 and count_o = 3:
+        flag = 1
+    if flag == 1:
         return False
     return True
 
