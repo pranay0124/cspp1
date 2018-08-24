@@ -25,18 +25,37 @@ def is_valid(mat):
         return True
     return False
 
+def is_count(mat):
+    count_x = 0
+    count_o = 0
+    count_sp = 0
+    for i in mat:
+        for j in i:
+            if j == 'x':
+                count_x += 1
+            elif j == '0':
+                count_o += 1
+            else:
+                count_sp += 1
+    if count_x or count_o or count_sp > 5:
+        return False
+    else:
+        True
 def main():
     rows = 3
     mat = []
     for i in range(rows):
         mat.append(list(input().split()))
+    count_flag = is_count(mat)
     valid_flag = is_valid(mat)
     flag_h = is_horizontal(mat)
     flag_v = is_vertical(mat)
     flag_d = is_diagonal(mat)
-    if valid_flag == False:
+    if count_flag == False:
+        print("invalid game") 
+    elif valid_flag == False:
         print("invalid input")
-    elif flag_h and flag_v and flag_d == False:
+    elif flag_h == False and flag_v == False and flag_d == False:
         print("draw")
     elif flag_h != False:
         print(flag_h)
