@@ -47,8 +47,7 @@ def is_count(mat):
                 count_sp += 1
     if count_x > 5 or count_o > 5:
         return False
-    else:
-        True
+    return True
 
 def main():
     '''main tictactoe function'''
