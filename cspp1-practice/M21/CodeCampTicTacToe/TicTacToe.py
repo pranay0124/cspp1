@@ -17,8 +17,8 @@ def is_vertical(mat):
 def is_diagonal(mat):
     '''diagonal function'''
     center_1 = mat[1][1]
-    if ((center_1 == mat[0][2] and center_1 == mat[2][0])
-        or (center_1 == mat[0][0] and center_1 == mat[2][2])):
+    if ((center_1 == mat[0][2] and center_1 == mat[2][0]) \
+    or (center_1 == mat[0][0] and center_1 == mat[2][2])):
         return center_1
     return False
 
@@ -54,7 +54,7 @@ def main():
     '''main tictactoe function'''
     rows = 3
     mat = []
-    for i in range(rows):
+    for _ in range(rows):
         mat.append(list(input().split()))
 
     flag_h = is_horizontal(mat)
