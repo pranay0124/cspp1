@@ -60,7 +60,7 @@ def main():
             flag_d = is_diagonal(mat)
             if flag_h == False and flag_v == False and flag_d == False:
                 print("draw")
-            elif count_hf == 1 and count_vf == 1:
+            elif flag_h != False and flag_v != False:
                 print("invalid game")
             elif flag_h != False:
                 print(flag_h)
