@@ -56,7 +56,7 @@ def is_count(mat):
                 count_sp += 1
     if count_x > 5 or count_o > 5:
         flag = 1
-    if count_x == count_0:
+    if count_x == count_o:
         flag = 1
     if flag == 1:
         return False
