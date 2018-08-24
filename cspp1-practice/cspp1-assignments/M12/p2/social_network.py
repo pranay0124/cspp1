@@ -14,6 +14,8 @@ def follow(network, arg1, arg2):
     '''
     if arg1 in network:
         network[arg1].append(arg2)
+    else:
+        network[arg1] = [arg2]
     return network
 
 def unfollow(network, arg1, arg2):
@@ -49,7 +51,6 @@ def delete_person(network, arg1):
     for person in network:
         if arg1 in network[person]:
             network[person].remove(arg1)
-
     # for i in network:
     #     for k in [network[0]][k] == str(arg1):
     #         print(network)
