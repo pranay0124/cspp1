@@ -54,7 +54,7 @@ def is_count(mat):
             else:
                 count_sp += 1
     if count_x == count_o and count_sp == count_x:
-        return "invalid game"
+        return False
     if count_x > 5 or count_o > 5:
         return False
     return True
