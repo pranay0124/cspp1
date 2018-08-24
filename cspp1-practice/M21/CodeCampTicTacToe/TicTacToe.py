@@ -16,6 +16,8 @@ def is_diagonal(mat):
         return c
     return False
 
+def is_valid(mat):
+    if 
 
 def main():
     rows = 3
@@ -26,7 +28,7 @@ def main():
     flag_v = is_vertical(mat)
     flag_d = is_diagonal(mat)
     if flag_h and flag_v and flag_d == False:
-        print(draw)
+        print("draw")
     elif flag_h != False:
         print(flag_h)
     elif flag_v != False:
