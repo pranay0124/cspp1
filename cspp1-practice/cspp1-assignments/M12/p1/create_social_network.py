@@ -40,7 +40,7 @@ def create_social_network(data):
     for i in data:
 
         list_1 = i.split(" follows ")
-        
+
         if list_1[0].endswith("!") is True:
             return dict_1
 
