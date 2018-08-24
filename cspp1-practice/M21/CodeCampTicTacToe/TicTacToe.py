@@ -17,17 +17,26 @@ def is_diagonal(mat):
     return False
 
 def is_valid(mat):
-    pass
+    temp_set = set()
+    for i in mat:
+        for j in i:
+            temp_set.add(j)
+    if 'x' in temp_set and 'o' in temp_set and '.' in temp_set:
+        return True
+    return False
 
 def main():
     rows = 3
     mat = []
     for i in range(rows):
         mat.append(list(input().split()))
+    valid_flag = is_valid(mat)
     flag_h = is_horizontal(mat)
     flag_v = is_vertical(mat)
     flag_d = is_diagonal(mat)
-    if flag_h and flag_v and flag_d == False:
+    if valid_flag == False:
+        print("invalid input")
+    elif flag_h and flag_v and flag_d == False:
         print("draw")
     elif flag_h != False:
         print(flag_h)
@@ -35,6 +44,7 @@ def main():
         print(flag_v)
     else:
         print(flag_d)
+    print(valid_flag)
 
 
     
