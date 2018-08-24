@@ -72,11 +72,11 @@ def main():
                 print("draw")
             # elif flag_h != False and flag_v != False:
             #     print("invalid game")
-            elif not flag_h:
+            elif flag_h:
                 print(flag_h)
-            elif not flag_v:
+            elif flag_v:
                 print(flag_v)
-            elif not flag_d:
+            elif flag_d:
                 print(flag_d)
             else:
                 print("invalid game")
