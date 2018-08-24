@@ -41,7 +41,7 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    print(text)
+    #print(text)
     words_list = re.sub('[^ a-z]', '', text.lower())
     words_list = words_list.replace("'", "")
     words_list = words_list.split()
@@ -84,7 +84,7 @@ def build_search_index(docs_list):
             if word in final_dict:
                 final_dict[word].append(k,a_1[l][word])
             else:
-                final_dict[word] = [(k,a_1[l][word])]
+                final_dict[word] = [(k,a_1[k][word])]
     return final_dict 
 
     
