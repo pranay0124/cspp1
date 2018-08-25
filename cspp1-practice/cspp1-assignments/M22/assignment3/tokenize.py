@@ -3,6 +3,7 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 import collections
+import re
 def tokenize(string):
     string = dict(collections.Counter(string))
     print(string)
