@@ -19,9 +19,9 @@ def is_horizontal(sudoku):
 def is_vertical(sudoku):
     set_v = set()
     for i in range(len(sudoku)):
-        for j in range(len(i)):
-            a = int(i[0])
-            set_v.add(sudoku[a][j])
+        for j in range(i):
+            set_v.add(sudoku[j][i])
+            break
         # set_v.add(i[0])
     print(set_v)
     if len(set_v) == 9:
