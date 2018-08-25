@@ -11,7 +11,7 @@ def is_horizontal(sudoku):
     set_h = set()
     for i in sudoku:
         for j in i:
-            set_h.add(i)
+            set_h.add(j)
     print(set_h)
 
 def check_sudoku(sudoku):
