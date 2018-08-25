@@ -25,7 +25,7 @@ def is_vertical(sudoku):
         # set_v.add(i[0])
     if len(set_v) == 9:
         return True
-    return False     
+    return False
 
 def is_matrix(sudoku):
     set_1 = set()
@@ -69,7 +69,7 @@ def is_matrix(sudoku):
         len(set_5) == 9 and \
         len(set_6) == 9 and len(set_7) == 9 and len(set_8) == 9 and len(set_9) == 9:
         return True
-    return False 
+    return False
 
 def check_sudoku(sudoku):
     '''
