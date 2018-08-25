@@ -4,9 +4,9 @@ alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
-    cleaned_string = re.sub['[^ a-zA-Z0-9]','',string]
-    return cleaned_string
-    
+    string = re.sub['[^ a-zA-Z0-9]','',string]
+    return string
+
 def main():
     string = input()
     print(clean_string(string))
