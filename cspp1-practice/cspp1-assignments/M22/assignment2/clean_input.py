@@ -4,13 +4,13 @@ alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
-	'''cleaning function'''
+    '''cleaning function'''
     string = re.sub('[^ a-zA-Z0-9]', '', string)
     string = string.replace(" ", "")
     return string
 
 def main():
-	'''main function'''
+    '''main function'''
     string = input()
     print(clean_string(string))
 
