@@ -6,7 +6,7 @@ import collections
 import re
 def tokenize(string):
     string = dict(collections.Counter(string))
-    print(string)
+    return string
             
 def main():
     lines = int(input())
@@ -14,6 +14,7 @@ def main():
     	temp = input()
     	temp = re.sub('[^ a-zA-Z0-9]', '', temp)
     	temp = list(temp.split())
-    	tokenize(temp)
+    	adict = tokenize(temp)
+    print(adict)
 if __name__ == '__main__':
     main()
