@@ -5,13 +5,12 @@ each word
 import collections
 def tokenize(string):
     string = dict(collections.Counter(string))
-    return string
+    print(string)
             
 def main():
     lines = int(input())
     for i in range(lines):
     	temp = list(input().split())
     	tokenize(temp)
-    print(temp)
 if __name__ == '__main__':
     main()
