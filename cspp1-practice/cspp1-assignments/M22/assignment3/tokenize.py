@@ -14,6 +14,7 @@ def main():
     temp = ""
     for i in range(lines):
         tep = input()
+        tep = re.sub('[^ a-zA-Z0-9]', '', tep)
         temp = temp + tep
     temp = re.sub('[^ a-zA-Z0-9]', '', temp)
     temp = list(temp.split())
