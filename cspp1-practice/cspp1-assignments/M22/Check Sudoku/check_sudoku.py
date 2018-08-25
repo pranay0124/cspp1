@@ -19,7 +19,10 @@ def is_horizontal(sudoku):
 def is_vertical(sudoku):
     set_v = set()
     for i in sudoku:
-        set_v.add(i[0])
+        for j in sudoku:
+            set_v.add(sudoku[i][j])
+        # set_v.add(i[0])
+    print(set_v)
     if len(set_v) == 9:
         return True
     return False     
@@ -29,8 +32,8 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    # print(is_horizontal(sudoku))
-    # print(is_vertical(sudoku))
+    print(is_horizontal(sudoku))
+    print(is_vertical(sudoku))
     
 def main():
     '''
@@ -47,7 +50,6 @@ def main():
         row = input().split(' ')
         sudoku.append(row)
     # call solution function and print result to console
-    print(sudoku[:3,:3])
     print(check_sudoku(sudoku))
 
 if __name__ == '__main__':
