@@ -11,7 +11,7 @@ def tokenize(string):
 def main():
     lines = int(input())
     adict = {}
-    list_1 = []
+    temp = ""
     for i in range(lines):
         tep = input()
         temp = temp + tep
