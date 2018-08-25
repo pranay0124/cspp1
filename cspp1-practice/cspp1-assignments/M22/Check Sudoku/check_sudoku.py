@@ -19,8 +19,8 @@ def is_horizontal(sudoku):
 def is_vertical(sudoku):
     set_v = set()
     for i in sudoku:
-        set_h.add(i[0])
-    if len(set_h) == 9:
+        set_v.add(i[0])
+    if len(set_v) == 9:
         return True
     return False     
 
