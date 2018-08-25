@@ -20,7 +20,8 @@ def is_vertical(sudoku):
     set_v = set()
     for i in sudoku:
         for j in range(len(i)):
-            set_v.add(sudoku[i][j])
+            a = i[0]
+            set_v.add(sudoku[a][j])
         # set_v.add(i[0])
     print(set_v)
     if len(set_v) == 9:
