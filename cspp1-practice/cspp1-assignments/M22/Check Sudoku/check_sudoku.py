@@ -78,7 +78,7 @@ def check_sudoku(sudoku):
     flag_h = is_horizontal(sudoku)
     flag_v = is_vertical(sudoku)
     flag_m = is_matrix(sudoku)
-    if flag_h == True and flag_v == True and flag_m == True:
+    if (flag_h == True and flag_v == True) or flag_m == True:
         return True
     return False
 
