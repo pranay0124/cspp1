@@ -7,13 +7,13 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-import numpy
+import numpy as np
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    array = numpy.array(sudoku)
+    array = np.array(sudoku)
     print(array)
 
 def main():
