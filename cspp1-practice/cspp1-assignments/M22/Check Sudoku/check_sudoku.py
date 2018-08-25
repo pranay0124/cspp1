@@ -8,6 +8,7 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def is_horizontal(sudoku):
+    '''horizontal function'''
     set_h = set()
     for i in sudoku:
         for j in i:
@@ -18,6 +19,7 @@ def is_horizontal(sudoku):
     return False
 
 def is_vertical(sudoku):
+    '''verytical function'''
     set_v = set()
     for i in range(len(sudoku)):
         for j in range(len(sudoku)):
@@ -28,6 +30,7 @@ def is_vertical(sudoku):
     return False
 
 def is_matrix(sudoku):
+    '''matrix function'''
     set_1 = set()
     for i in range(0, 3):
         for j in range(0, 3):
