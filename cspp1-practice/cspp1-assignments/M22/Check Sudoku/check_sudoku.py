@@ -20,7 +20,7 @@ def is_horizontal(sudoku):
 def is_vertical(sudoku):
     set_v = set()
     for i in range(len(sudoku)):
-        for j in range(i):
+        for j in range(len(sudoku)):
             set_v.add(sudoku[j][i])
             print(set_v)
         break
