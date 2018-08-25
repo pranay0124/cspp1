@@ -12,7 +12,10 @@ def is_horizontal(sudoku):
     for i in sudoku:
         for j in i:
             set_h.add(j)
-    print(set_h)
+    if count(set_h) == 9:
+        print(True)
+    print(False)
+    
 
 def check_sudoku(sudoku):
     '''
