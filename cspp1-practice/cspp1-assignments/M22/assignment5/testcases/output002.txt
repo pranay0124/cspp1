@@ -1,6 +1,0 @@
-CPP - #
-Hello - ##
-Java - #
-hello - ##
-python - #
-world - #
