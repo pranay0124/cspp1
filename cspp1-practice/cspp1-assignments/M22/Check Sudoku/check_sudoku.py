@@ -23,7 +23,7 @@ def is_vertical(sudoku):
         for j in range(i):
             set_v.add(sudoku[j][i])
             break
-            print(set_v)
+            # print(set_v)
         # set_v.add(i[0])
     if len(set_v) == 9:
         return True
