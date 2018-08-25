@@ -3,7 +3,7 @@ Write a function to print a dictionary with the keys in sorted order along with 
 frequency of each word. Format of the printing should be one key per line and separate
 the key and frequency with a SPACE - SPACE.
 '''
-
+import collections
 def print_dictionary(dictionary):
     # dictionary = sorted(dictionary)
     dictionary = dict(collections.OrderedDict(sorted(dictionary.items())))
