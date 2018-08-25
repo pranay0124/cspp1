@@ -13,7 +13,8 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    pass
+    array = numpy.array(sudoku)
+    print(array)
 
 def main():
     '''
@@ -30,7 +31,6 @@ def main():
         row = input().split(' ')
         sudoku.append(row)
     # call solution function and print result to console
-    print(sudoku)
     print(check_sudoku(sudoku))
 
 if __name__ == '__main__':
