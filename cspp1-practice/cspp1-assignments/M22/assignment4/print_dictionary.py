@@ -7,7 +7,7 @@ import collections
 def print_dictionary(dictionary):
     '''function to print a dictionary'''
     # dictionary = sorted(dictionary)
-    dictionary = dict(collections.OrderedDict(sorted(dictionary.items())))
+    dictionary = dict(sorted(dictionary.items()))
     for k in dictionary.keys():
         print(k, "-", dictionary[k])
 
