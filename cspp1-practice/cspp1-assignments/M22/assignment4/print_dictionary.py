@@ -5,12 +5,14 @@ the key and frequency with a SPACE - SPACE.
 '''
 import collections
 def print_dictionary(dictionary):
+    '''function to print a dictionary'''
     # dictionary = sorted(dictionary)
     dictionary = dict(collections.OrderedDict(sorted(dictionary.items())))
     for k in dictionary.keys():
         print(k, "-", dictionary[k])
 
 def main():
+    '''main function'''
     dictionary = eval(input())
     print_dictionary(dictionary)
 
