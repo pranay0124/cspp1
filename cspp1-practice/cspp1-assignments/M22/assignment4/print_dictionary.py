@@ -5,6 +5,7 @@ the key and frequency with a SPACE - SPACE.
 '''
 
 def print_dictionary(dictionary):
+	dictionary = sorted(dictionary)
     for k in dictionary.keys():
     	print(k, " - ", dictionary[k])
 
