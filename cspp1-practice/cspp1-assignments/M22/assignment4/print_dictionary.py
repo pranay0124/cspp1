@@ -6,7 +6,7 @@ the key and frequency with a SPACE - SPACE.
 
 def print_dictionary(dictionary):
     for k, v in dictionary.iteritems():
-    	print k + " - " + v
+    	print(k + " - " + v)
 
 def main():
     dictionary = eval(input())
