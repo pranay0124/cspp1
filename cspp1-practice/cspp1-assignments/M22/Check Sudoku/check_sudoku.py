@@ -28,17 +28,25 @@ def is_vertical(sudoku):
         return True
     return False     
 
+def is_matrix(sudoku):
+    set_1 = set()
+    for i in range(0, 3):
+        for j in range(0, 3):
+            set_1.add(sudoku[i][j])
+    print(set_1)
+
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    flag_h = is_horizontal(sudoku)
-    flag_v = is_vertical(sudoku)
-    if flag_h == True and flag_v == True:
-        return True
-    return False
-    
+    # flag_h = is_horizontal(sudoku)
+    # flag_v = is_vertical(sudoku)
+    # if flag_h == True and flag_v == True:
+    #     return True
+    # return False
+    is_matrix(sudoku)
+
 def main():
     '''
         main function to read input sudoku from console
