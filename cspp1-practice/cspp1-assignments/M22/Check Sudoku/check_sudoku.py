@@ -18,7 +18,7 @@ def is_horizontal(sudoku):
 
 def is_vertical(sudoku):
     set_v = set()
-    for i in sudoku:
+    for i in range(len(sudoku)):
         for j in range(len(i)):
             a = int(i[0])
             set_v.add(sudoku[a][j])
