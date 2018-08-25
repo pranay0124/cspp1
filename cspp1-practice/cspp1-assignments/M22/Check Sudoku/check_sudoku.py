@@ -34,32 +34,32 @@ def is_matrix(sudoku):
         for j in range(0, 3):
             set_1.add(sudoku[i][j])
     set_2 = set()
-    for i in range(3, 6):
-        for j in range(0, 3):
-            set_1.add(sudoku[i][j])
-    set_3 = set()
-    for i in range(6, 9):
-        for j in range(0, 3):
-            set_1.add(sudoku[i][j])
-    set_4 = set()
     for i in range(0, 3):
         for j in range(3, 6):
+            set_1.add(sudoku[i][j])
+    set_3 = set()
+    for i in range(0, 3):
+        for j in range(6, 9):
+            set_1.add(sudoku[i][j])
+    set_4 = set()
+    for i in range(3, 6):
+        for j in range(0, 3):
             set_1.add(sudoku[i][j])
     set_5 = set()
     for i in range(3, 6):
         for j in range(3, 6):
             set_1.add(sudoku[i][j])
     set_6 = set()
-    for i in range(6, 9):
-        for j in range(3, 6):
-            set_1.add(sudoku[i][j])
-    set_7 = set()
-    for i in range(0, 3):
-        for j in range(6, 9):
-            set_1.add(sudoku[i][j])
-    set_8 = set()
     for i in range(3, 6):
         for j in range(6, 9):
+            set_1.add(sudoku[i][j])
+    set_7 = set()
+    for i in range(6, 9):
+        for j in range(0, 3):
+            set_1.add(sudoku[i][j])
+    set_8 = set()
+    for i in range(6, 9):
+        for j in range(3, 6):
             set_1.add(sudoku[i][j])
     set_9 = set()
     for i in range(6, 9):
