@@ -11,11 +11,10 @@ def tokenize(string):
 def main():
     lines = int(input())
     adict = {}
-    for i in range(lines):
-    	temp = input()
-    	temp = re.sub('[^ a-zA-Z0-9]', '', temp)
-    	temp = list(temp.split())
-    	adict = tokenize(temp)
+    temp = input()
+   	temp = re.sub('[^ a-zA-Z0-9]', '', temp)
+    temp = list(temp.split())
+   	adict = tokenize(temp)
     print(adict)
 if __name__ == '__main__':
     main()
