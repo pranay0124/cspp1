@@ -12,9 +12,9 @@ def main():
     lines = int(input())
     adict = {}
     for i in range(lines):
-    	temp = input()
-    	temp = re.sub('[^ a-zA-Z0-9]', '', temp)
-    	temp = list(temp.split())
+    	temp[i] = input()
+    	temp[i] = re.sub('[^ a-zA-Z0-9]', '', temp)
+    	temp[i] = list(temp.split())
     	for j in range(lines):
     		temp_dict = tokenize(temp)
     	adict.update(temp_dict)
