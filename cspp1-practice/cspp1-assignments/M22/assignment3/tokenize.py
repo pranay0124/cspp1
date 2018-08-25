@@ -5,10 +5,12 @@ each word
 import collections
 import re
 def tokenize(string):
+    '''tokenize function'''
     string = dict(collections.Counter(string))
     return string
-            
+        
 def main():
+    '''main function'''
     lines = int(input())
     adict = {}
     temp = ""
