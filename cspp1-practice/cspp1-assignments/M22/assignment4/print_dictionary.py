@@ -8,7 +8,7 @@ def print_dictionary(dictionary):
     # dictionary = sorted(dictionary)
     dictionary = dict(collections.OrderedDict(sorted(dictionary.items())))
     for k in dictionary.keys():
-        print(k, " - ", dictionary[k])
+        print(k, "-", dictionary[k])
 
 def main():
     dictionary = eval(input())
