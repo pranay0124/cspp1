@@ -11,6 +11,7 @@ def tokenize(string):
 def main():
     lines = int(input())
     adict = {}
+    temp = []
     for i in range(lines):
     	temp[i] = input()
     	temp[i] = re.sub('[^ a-zA-Z0-9]', '', temp)
