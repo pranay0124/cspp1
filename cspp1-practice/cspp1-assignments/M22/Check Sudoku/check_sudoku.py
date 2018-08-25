@@ -29,8 +29,8 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    print(is_horizontal(sudoku))
-    print(is_vertical(sudoku))
+    # print(is_horizontal(sudoku))
+    # print(is_vertical(sudoku))
     
 def main():
     '''
@@ -47,6 +47,7 @@ def main():
         row = input().split(' ')
         sudoku.append(row)
     # call solution function and print result to console
+    print(sudoku[2:])
     print(check_sudoku(sudoku))
 
 if __name__ == '__main__':
