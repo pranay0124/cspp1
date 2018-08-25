@@ -65,7 +65,8 @@ def is_matrix(sudoku):
         for j in range(6, 9):
             set_1.add(sudoku[i][j])
 
-    if len(set_1) == 9 and len(set_2) == 9 and len(set_3) == 9 and len(set_4) == 9 and len(set_5) == 9 and \
+    if len(set_1) == 9 and len(set_2) == 9 and len(set_3) == 9 and len(set_4) == 9 and \
+        len(set_5) == 9 and \
         len(set_6) == 9 and len(set_7) == 9 and len(set_8) == 9 and len(set_9) == 9:
         return True
     return False 
