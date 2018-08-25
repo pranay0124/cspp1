@@ -10,7 +10,9 @@ def tokenize(string):
 def main():
     lines = int(input())
     for i in range(lines):
-    	temp = list(input().split())
+    	temp = input()
+    	temp = re.sub('[^ a-zA-Z0-9]', '', temp)
+    	temp = list(temp.split())
     	tokenize(temp)
 if __name__ == '__main__':
     main()
