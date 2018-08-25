@@ -34,7 +34,7 @@ def check_sudoku(sudoku):
     '''
     flag_h = is_horizontal(sudoku)
     flag_v = is_vertical(sudoku)
-    if flag_h == True or flag_v == True:
+    if flag_h == True and flag_v == True:
         return True
     return False
     
