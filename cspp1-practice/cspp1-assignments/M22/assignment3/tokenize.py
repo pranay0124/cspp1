@@ -13,11 +13,11 @@ def main():
     adict = {}
     list_1 = []
     for i in range(lines):
-    	tep = input()
+        tep = input()
         temp = temp + tep
     temp = re.sub('[^ a-zA-Z0-9]', '', temp)
-	temp = list(temp.split())
-	adict = tokenize(temp)
+    temp = list(temp.split())
+    adict = tokenize(temp)
     print(adict)
 if __name__ == '__main__':
     main()
