@@ -7,7 +7,7 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-
+import numpy
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
