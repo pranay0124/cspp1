@@ -7,15 +7,20 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-import numpy as np
+def is_horizontal(sudoku):
+    set_h = set()
+    for i in sudoku:
+        for j in i:
+            set_h.add(i)
+    print(set_h)
+
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    array = np.array(sudoku)
-    print(array)
 
+    
 def main():
     '''
         main function to read input sudoku from console
