@@ -10,7 +10,7 @@ def tokenize(string):
 def main():
     lines = int(input())
     for i in range(lines):
-    	temp = input()
+    	temp = list(str(input()))
     	tokenize(temp)
     print(temp)
 if __name__ == '__main__':
